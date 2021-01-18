@@ -1,0 +1,224 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-18 12:28:20
+ * @LastEditTime: 2021-01-18 20:37:52
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \Small-knowledge-base\JavaScript高级程序设计(第4版)\第3章\3.3变量.HTML
+-->
+
+<!-- @Author: your name
+@Date: 2021-01-18 12:28:20
+@LastEditTime: 2021-01-18 12:28:21
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: \Small-knowledge-base\JavaScript高级程序设计(第4版)\第三章 语言基础\第三章 语言基础\3.语言基础\d\第三章\3.yuyan.js -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+  //3.3.1var 关键字
+  //使用var在函数内部定义一个变量，该变量在函数退出时被销毁
+  // function test(){
+  //   var message = "hi";//局部变量
+  // }
+  // test();
+  // console.log(message);// message is not defined
+
+  //下面message为全局变量
+  function test(){
+    message = "hi";
+  }
+  test();
+  console.log(message);
+
+  //当去掉var操作符，message为全局变量，只需要调用一次test()，就会定义这个变量
+
+
+  //var声明提升  如下关键字声明的变量会自动提升到函数作用域顶部
+  //也就是把所有变量声明都拉到函数作用域的顶部
+  function foo(){
+    console.log(age);
+    var age = 26;
+  }
+  foo(); //undefined
+  //该代码如下
+  // function foo(){
+  //   var age;
+  //   console.log(age);
+  //   age = 26;
+  // }
+  // foo();
+
+
+  //3.3.2 let声明
+  //let声明式块作用域，而var声明的范围是函数作用域
+  if(true){
+    var name = 'Matt';
+    console.log(name);//Matt
+  }
+  console.log(name);//Matt
+  //而
+  if(true){
+    let age = 26;
+    console.log(age);//26
+  }
+  //console.log(age);//ReferenceError: age is not defined
+
+  //let不允许一个作用域中出现冗余声明
+  // var name;
+  // var name;
+
+  // let age;
+  // let age;//age已经声明过了
+
+  //嵌套使用相同的标识符，同一个块中没有重复声明
+  var name = 'Nicholas';
+  console.log(name); //'Nicholas'
+  if(true){
+    var name = 'Matt';
+    console.log(name);
+  }
+
+  let age = 30;
+  console.log(age); //30
+  if(true){
+    let age = 26;
+    console.log(age);
+  }
+
+  //如下只是指出变量在相关作用域如何存在
+  // var name;
+  // let name; //SyntaxError
+
+  // let age;
+  // var age; //SyntaxError
+
+
+  //1.暂时性死区 在let声明之前的执行瞬间被称为”暂时性死区，
+  //  在此阶段引用任何后面才声明的变量都会抛出ReferenceError
+  //let声明的变量不会在作用域中被提升
+  //name会被提升
+  console.log(name);//undefined
+  var name = 'Matt';
+
+  //age不会被提升
+  console.log(age);//ReferenceError:age 没有定义
+  let age = 26;
+
+  //2.全局声明  使用let在全局作用域中声明的变量不会成为window对象的属性
+  //  但是let声明依然是在全局中发生的，相应变量会在页面的生命周期内存续
+  //  因此为了避免SyntaxError，确保页面不会重复声明同一个变量
+  var name = 'Matt';
+  console.log(window.name);//Matt
+
+  let age = 26;
+  console.log(window.age);//undefined
+  //  
+</script>
+
+
+<script>
+  var name = 'Nicholas';
+  let age = 26;
+</script>
+<script>
+  //假设脚本不确定页面中是否已经声明了同名变量
+  //那它可以假设还没有声明过
+  var name = 'Matt';
+  //这里没问题 提升声明
+  let age = 36;
+  //如果之前声明过这里就会报错
+
+  //使用try/catch或typeof也不能解决，因为let声明的作用域仅限于该块
+  if(typeof name === 'undefined'){
+    let name;
+  }
+  //name被限制在if()块的作用域内
+  //因此这个赋值形同全局赋值
+  name = 'Matt';
+
+  try{
+    console.log(age);//如果age没有声明过，则会报错
+  }
+  catch(error){
+    let age;
+  }
+  //age被限制在catch()块的作用域内
+  //因此这个赋值形同全局赋值
+  age = 26;
+
+  //为此，let 不能依赖条件声明模式
+
+  //4.for循环中let声明
+  for(var i = 0;i <5 ; ++i){
+  }
+  console.log(i);//5  迭代变量渗透到了循环体外部
+
+  for(let i = 0;i <5 ; ++i){
+  }
+  console.log(i);//ReferenceError: i 没有定义  因为迭代遍历的作用域仅限于for循环块内部
+
+  //var迭代变量的奇特声明和修改 适用于所有for循环 包括for-in for-of
+  for(var i = 0;i < 5;++i){
+    setTimeout(()=>console.log(i),0)
+  }
+  //会输出5、5、5、5、5
+  //退出循环时，迭代遍历保存的是导致退出循环的值，
+  //在之后执行超时逻辑时，所有的i都是同一个变量，而输出的都是同一个最总值
+
+  for(let i = 0;i <5 ; ++i){
+    setTimeout(()=>console.log(i),0)
+  }
+  //会输出0、1、2、3、4
+</script>
+<script>
+  //3.3.3const
+  //const的行为与let基本相同，它声明变量时必须同时初始化变量，而且不能修改
+  //const 的限制只适用于它指向的变量的引用 如果引用是对象，修改这个对象内部的属性是不违反const的限制哟
+  const age = 26;
+  age = 36;//TypeError: 给常量赋值
+
+  const person = {};
+  person.name = 'Matt';//可以哟
+
+  //const 不允许重复声明，const 声明的作用域也是块
+  const name = 'Matt';
+  const name = 'Nicholas';//SyntaxError
+
+  const name = 'Matt';
+  if(true){
+    const name = 'Nicholas';
+  }
+  console.log(name);//Matt
+
+  //const不能用来声明迭代变量哟
+  for(const i = 0;i<10;++i){}//TypeError: 给常量赋值
+
+  //如果只想声明一个不会被修改的for循环变量可以，每次循环只是创建一个新变量 
+  //这对for-of和for-in有特别意义
+  let i = 0;
+  for(const j = 7;i<5;++i){
+    console.log(j);
+  }
+  //7,7,7,7,7
+
+  for(const key in {a:1,b:2}){
+    console.log(key)
+  }
+  //a,b
+
+  for(const value of[1,2,3,4,5]){
+    console.log(value);
+  }
+  //1,2,3,4,5
+</script>
+</html>
+ 
