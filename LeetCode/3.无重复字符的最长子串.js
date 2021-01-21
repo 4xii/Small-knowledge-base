@@ -1,23 +1,17 @@
-<!--
- * @Author: your name
- * @Date: 2021-01-19 20:13:25
- * @LastEditTime: 2021-01-19 20:54:42
+/*
+ * @Author: 4xi
+ * @Date: 2021-01-21 22:05:18
+ * @LastEditTime: 2021-01-21 22:05:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \Small-knowledge-base\LeetCode\3.无重复字符的最长子串.html
+ * @FilePath: \Small-knowledge-base\LeetCode\3.无重复字符的最长子串.js
+ * 
+ * 
+ * 
+ * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+ */
 
- 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
--->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-</body>
-<script>
+
   /* 
     1.创建一个set
     2.两个指针
@@ -49,5 +43,3 @@ var lengthOfLongestSubstring = function(s){
   }
   return maxLength;
 }
-</script>
-</html>
