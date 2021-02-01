@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="list">
+    
+  </ul>
+  <script>
+    var arr = [
+      {"name":"小明","age":12,"sex":"男"},
+      {"name":"小红","age":11,"sex":"女"},
+      {"name":"小强","age":13,"sex":"男"},
+    ]
+
+    var list = document.getElementById('list');
+
+    for(var i = 0;i<arr.length;i++){
+      //每遍历一项都要用DOM去创建list标签
+      let oLi = document.createElement('li');
+      //创建hd这个div
+      let hdDiv = document.createElement('div');
+      hdDiv.className = 'hd';
+      hdDiv.innerText = arr[i].name + '的基本信息';
+      //创建bd这个div
+      let bdDiv = document.createElement('div');
+      bdDiv.className = 'bd';
+      //创建三个p
+      let p1 = document.createElement('p');
+      p1.innerText = '姓名:' + arr[i].name;
+      bdDiv.appendChild(p1)
+      let p2 = document.createElement('p');
+      p2.innerText = '年龄:' + arr[i].age;
+      bdDiv.appendChild(p2)
+      let p3 = document.createElement('p');
+      p3.innerText = '性别:' + arr[i].sex;
+      bdDiv.appendChild(p3)
+
+
+      //创建的节点是孤儿节点，必须上树才能被用户看见
+      oLi.appendChild(hdDiv);
+      //创建的节点是孤儿节点，必须上树才能被用户看见
+      oLi.appendChild(bdDiv);
+      //创建的节点是孤儿节点，必须上树才能被用户看见
+      list.appendChild(oLi);
+    }
+  </script>
+</body>
+</html>

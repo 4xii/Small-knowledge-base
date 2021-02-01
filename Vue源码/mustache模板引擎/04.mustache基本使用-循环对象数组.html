@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="jslib/mustache.js"></script>
+  <div id="container"></div>
+  <script type="text/template" id="mytemplate">
+    <ul>
+      {{#arr}}
+          <li>
+            <div class="hd">{{name}}基本信息</div>
+            <div class="bd">
+              <p>姓名：{{name}}</p>
+              <p>年龄：{{age}}</p>
+              <p>性别：{{sex}}</p>
+            </div>
+          </li>
+      {{/arr}}
+    </ul>
+  </script>
+  <script>
+    var templateStr = document.getElementById('mytemplate').innerHTML;
+
+    var data = {
+        arr: [
+          { "name": "小明", "age": 12, "sex": "男" },
+          { "name": "小红", "age": 11, "sex": "女" },
+          { "name": "小强", "age": 13, "sex": "男" },
+        ]
+      }
+    
+    var domStr = Mustache.render(templateStr,data);
+    var container = document.getElementById('container');
+    container.innerHTML = domStr;
+  </script>
+</body>
+</html>

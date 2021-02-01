@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var templateStr = '<h1>我买了一个{{thing}},好{{mood}}啊</h1>';
+    
+    var data = {
+      thing:'华为',
+      mood:'开心'
+    }
+
+    //最简单的模板引擎的实现机理，利用的是正则表达式中的replace()方法
+    //replace()的第二个参数是一个函数，这个函数提供捕获的东西的参数，就是$1
+    //结合data对象，即可进行智能的替换
+    function render(templateStr,data){
+      return templateStr.replace(/\{\{(\w+)\}\}/g,function(findStr,$1){
+        return data[$1];
+      })
+    }
+    
+    var result = render(templateStr,data);
+    console.log(result);
+  </script>
+</body>
+</html>

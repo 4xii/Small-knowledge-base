@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="jslib/mustache.js"></script>
+  <div id="container">
+
+  </div>
+  <script>
+    var templateStr = `
+      <ul>
+        {{#arr}}
+          <li>{{.}}</li>
+        {{/arr}}  
+      </ul>
+    `;
+    
+    var data = {
+      arr:['A','B','C']
+    }
+    
+    var domStr = Mustache.render(templateStr,data);
+    var container = document.getElementById('container');
+    container.innerHTML = domStr;
+  </script>
+</body>
+</html>

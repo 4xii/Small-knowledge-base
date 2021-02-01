@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="jslib/mustache.js"></script>
+  <script>
+    var templateStr = `
+      <ul>
+        {{#arr}}
+            <li>
+              <div class="hd">{{name}}基本信息</div>
+              <div class="bd">
+                <p>姓名：{{name}}</p>
+                <p>年龄：{{age}}</p>
+                <p>性别：{{sex}}</p>
+              </div>
+            </li>
+        {{/arr}}
+      </ul>
+    `;
+    Mustache.render(templateStr,{})
+  </script>
+</body>
+</html>
