@@ -10,7 +10,13 @@
   <script src="/xuni/bundle.js"></script>
 
   <script>
-    Sxi_TemplateEngine.render();
+    //模板字符串
+    var templateStr = '我买了一个{{thing}}，好{{mood}}啊';
+    //数据
+    var data = {};
+
+    //调用render
+    Sxi_TemplateEngine.render(templateStr,data);
   </script>
 </body>
 </html>
