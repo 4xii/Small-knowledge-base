@@ -6,7 +6,7 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>我是index.html</h1>
+  <div id="container"></div>
   <script src="/xuni/bundle.js"></script>
 
   <script>
@@ -14,7 +14,7 @@
     var templateStr = `
       <div>
         <ul>
-          {{#arr}}
+          {{#students}}
             <li>{{name}}的爱好是:
               <ol>
                 {{#hobbies}}
@@ -22,7 +22,7 @@
                 {{/hobbies}}
               </ol>
             </li>
-          {{/arr}}  
+          {{/students}}  
         </ul>
       <div/>
     `;
@@ -36,7 +36,10 @@
     };
 
     //调用render
-    Sxi_TemplateEngine.render(templateStr,data);
+    var domStr = Sxi_TemplateEngine.render(templateStr,data);
+    //渲染上树
+    var container = document.getElementById('container');
+    container.innerHTML = domStr;
   </script>
 </body>
 </html>

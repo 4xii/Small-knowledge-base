@@ -4,7 +4,6 @@ import parseArray from './parseArray.js';
   函数的功能是让tokens数组变成dom字符串
 */
 export default function renderTemplate(tokens,data){
-  console.log(tokens,data);
   //结果字符串
   var resultStr = '';
   //变量tokens
@@ -23,6 +22,5 @@ export default function renderTemplate(tokens,data){
     }
     
   }
-  console.log(resultStr);
   return resultStr;
 }

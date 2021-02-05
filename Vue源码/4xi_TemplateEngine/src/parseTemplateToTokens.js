@@ -13,7 +13,28 @@ export default function parseTemplateToTokens(templateStr) {
     //收集开始标记出现之前的文字
     words = scanner.scanUtil('{{');
     if(words != ''){
-      //存text
+      //去掉空格，判断普通文字的空格还是标签中的空格
+      let isInJJH = false;
+      //空白字符串
+      var _words = '';
+      for(let i = 0;i<words.length;i++){
+        //判断是否在标签里
+        if(words[i] == '<'){
+          isInJJH = true;
+        } else if(words[i] == '>'){
+          isInJJH = false;
+        }
+        //如果不是空格，拼上
+        if(words[i] != ''){
+          _words += words[i];
+        }else{
+          //如果这项是空格，只有当它在标签内的时候，才拼接上
+          if(!isInJJH) {
+            _words += words[i];
+          }
+        }
+      }
+      //存text，去掉空格
       tokens.push(['text',words]);
     }    
     //过双大括号

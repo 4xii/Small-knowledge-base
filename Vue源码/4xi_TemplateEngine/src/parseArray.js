@@ -11,7 +11,6 @@ import renderTemplate from "./renderTemplate";
 export default function parseArray(token,data){
   //得到整体数据data中这个数组要使用的部分
   var v = lookup(data,token[1]);
-  console.log(v);
   //结果字符串
   var resultStr = '';
   //遍历v数组
