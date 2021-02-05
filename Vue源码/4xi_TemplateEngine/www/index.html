@@ -11,9 +11,29 @@
 
   <script>
     //模板字符串
-    var templateStr = '我买了一个{{thing}}，好{{mood}}啊';
+    var templateStr = `
+      <div>
+        <ul>
+          {{#arr}}
+            <li>{{name}}的爱好是:
+              <ol>
+                {{#hobbies}}
+                  <li>{{.}}</li>
+                {{/hobbies}}
+              </ol>
+            </li>
+          {{/arr}}  
+        </ul>
+      <div/>
+    `;
     //数据
-    var data = {};
+    var data = {
+      students:[
+        {'name':'小明','hobbies':['游泳','健身']},
+        {'name':'小红','hobbies':['足球','篮球','羽毛球']},
+        {'name':'小强','hobbies':['吃饭','睡觉']},
+      ]
+    };
 
     //调用render
     Sxi_TemplateEngine.render(templateStr,data);

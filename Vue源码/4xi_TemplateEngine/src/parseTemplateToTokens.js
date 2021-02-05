@@ -1,5 +1,5 @@
 import Scanner from './Scanner.js'
-
+import nestTokens from './nestTokens.js'
 /* 
   将模板字符串变为tokens数组
 */
@@ -25,16 +25,18 @@ export default function parseTemplateToTokens(templateStr) {
       if(words[0] == '#'){
         //存起来,从下标为1的项开始存，下标为0的项是#
         tokens.push(['#',words.substring(1)]);
-      } else if (word[0] == '/'){
+      } else if (words[0] == '/'){
         //存起来,从下标为1的项开始存，下标为0的项是/
         tokens.push(['/',words.substring(1)]);
       } else {
         //存起来
-        tokens.push(['text',words]);
+        tokens.push(['name',words]);
       }
     }
     //过双大括号
     scanner.scan('}}');
   }
-  return tokens;
+
+  //返回折叠收集的tokens
+  return nestTokens(tokens);
 }
