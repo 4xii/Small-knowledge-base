@@ -1,0 +1,19 @@
+{
+  "name": "snabbdom-diff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "snabbdom": "^2.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.21.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

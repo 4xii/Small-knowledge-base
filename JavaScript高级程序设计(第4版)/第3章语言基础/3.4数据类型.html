@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+  //6种简单的数据类型Undefined,Null,Boolean,Number,String和Symbol（新增）
+  //一种复杂数据类型Object
+
+  //3.4.1 typeof
+  console.log(typeof('abc'))//string
+  console.log(typeof 123)//number
+  console.log(typeof null)//Object null被认为是一个对空对象的引用
+
+  //3.4.2Undefined
+  //任何未经初始化的变量都会取得undefined值
+  let message;//let message = undefined;
+  console.log(message);//undefined
+
+  //但是
+  console.log(typeof age);//undefined 没有声明过但因为它无法执行实际操作
+
+  if(message){
+    //undefind 不执行
+  }
+  if(!message){
+    // message为false 执行
+  }
+  /* if(age){
+    //报错
+    } */
+
+  //3.4.3 null 变量要保存对象，当时又没有对象保存，就用null填充该对象
+  //从逻辑上，null表示一个空对象指针，这也是typeof返回Object的原因
+  //undefined是由null派生而来的
+  console.log(null == undefined);//ture
+  console.log(null === undefined);//false
+
+  //3.4.4 Boolean类型
+  //Boolean()转型函数
+  //false:空字符串 0,NaN null undefined
+  message = "Hello"
+  let messageAsBoolean = Boolean(message);//true
+  
+  //3.4.5 Number类型
+  //改变进制
+  //第一个数字为0 八进制 0x 十六进制
+  let octalNum1 = 070;//56
+  let hexNum1 = 0xA;//10
+
+  let floatNum = 3.125e7;//31250000
+
+ /*  if(a + b == 0.3){
+    //不行！！！
+    //0.05，0.25   0.15，0.15都行 0.1和0.2不行
+     } */
+
+  //Infinity无穷 -Infinity -∞
+  //NaN 意思是不是数值
+  //10,"10",true都可以转换为数值
+  console.log(0/0)//NaN 但如果5/0是Infinity哦
+  //NaN不等于包括NaN在内的任何值
+  console.log(NaN == NaN);//false
+  
+  //转换为数值的3个方法Number(),parseInt()和parseFloat()
+  //Number  ('你好')NaN ("")0 ("00011")11 (true)1
+
+  //parseInt  ("1234blue")1234 ("")NaN ("0xA")10
+  //parseInt第二个参数为进制 parseInt("0xAF",16)//175
+
+  //parseFloat()只识别最先出现的数字，只有十进制
+
+  //3.4.6 String类型
+  /* 
+     \n换行 \t制表 \b退格 \r回车 \f换页  \\ \'等等为转义
+  */
+
+  //字符串的长度可以用length属性获取，返回十六位字符的个数
+  //toString()方法可以转换为字符串(true.toString()为ture)
+  console.log(typeof true.toString())//string
+</script>
+</html>
