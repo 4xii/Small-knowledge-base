@@ -5,13 +5,18 @@ const myVnode1 = h('ul',{},[
   h('p',{key:'A'},'A'),
   h('p',{key:'B'},'B'),
   h('p',{key:'C'},'C'),
+  h('p',{key:'D'},'D'),
+  h('p',{key:'E'},'E'),
 ]);
 //新节点
 const myVnode2 = h('ul',{},[
-  h('p',{key:'A'},'A'),
+  h('p',{key:'E'},'E'),
   h('p',{key:'B'},'B'),
-  h('p',{key:'C'},'C'),
+  h('p',{key:'A'},'A'),
   h('p',{key:'D'},'D'),
+  h('p',{key:'C'},'C'),
+  h('p',{key:'Q'},'Q'),
+
 ])
 
 //得到盒子和按钮
