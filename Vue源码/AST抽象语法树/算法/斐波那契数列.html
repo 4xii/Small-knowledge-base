@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //试输出斐波那契数列的前10项，即1、1、2、3、5、8、13、21、34、55
+
+    //缓存对象
+    var cache = {};
+    //返回下标为n的这项的数字
+    function fib(n){
+      //判断缓存对象中有没有这个值
+      if(cache.hasOwnProperty(n)){
+        return cache[n];
+      }
+      //缓存对象没有这个值
+      //看下标n是不是1或者0，是就返回1如果不是就递归
+      var v = n == 0|| n == 1 ? 1 : fib(n - 1) + fib(n - 2);
+      //写入缓存
+      cache[n] = v;
+      return v;
+    }
+    console.log(fib(6));
+    for(let i = 0;i<=9 ;i++){
+      console.log(fib(i))
+    }
+  </script>
+</body>
+</html>

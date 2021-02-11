@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //转换数组的形式[1,2,3,[4,5]]为
+    // {
+    //   chidren:[
+    //     {
+    //       value:1
+    //     },
+    //     {
+    //       value:2 
+    //     },
+    //     {
+    //       value:3
+    //     },{
+    //       children:[
+    //         {
+    //           value:4
+    //         },
+    //         {
+    //           value:5
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // }
+
+    var arr = [1, 2, 3, [4, 5]];
+
+    //转换函数,方法1
+    // function convert(arr){
+    //   //准备结果数组
+    //   var result = [];
+    //   //遍历
+    //   for(let i = 0;i < arr.length; i++){
+    //     if(typeof arr[i] == 'number'){
+    //       result.push({
+    //         value:arr[i]
+    //       });
+    //     } else if (Array.isArray(arr[i])){
+    //       //如果遍历到这项是数组，那么就递归
+    //       result.push({
+    //         children:convert(arr[i])
+    //       });
+    //     }
+    //   }
+    //   return result;
+    // }
+
+    //转换函数，方法2,参数不是arr，而是item。item可能是数组，也可能是数字
+    //方法1的递归次数要大大小于方法2
+    function convert(item) {
+      if (typeof item == 'number') {
+        return {
+          value: item
+        };
+      } else if (Array.isArray(item)) {
+        //如果传进来的参数是数组
+        return {
+          children: item.map(_item => convert(_item))
+        }
+      }
+    }
+
+    var o = convert(arr);
+    console.log(o)
+  </script>
+</body>
+
+</html>
