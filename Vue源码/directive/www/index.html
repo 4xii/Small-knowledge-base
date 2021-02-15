@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+      你好{{b.m.n}}</br>
+      <input type="text" v-model="b.m.n">
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+    </div>
+  </div>
+  <button onclick="add()">按我加1</button>
+  <script src="/xuni/bundle.js"></script>
+  <script>
+    var vm = new Vue({
+      el:'#app',
+      data:{
+        a:10,
+        b:{
+          m:{
+            n:7
+          }
+        }
+      },
+      watch:{
+        a(){
+          console.log('a改变啦');
+        }
+      }
+    });
+
+    console.log(vm)
+
+    function add(){
+      vm.b.m.n ++;
+    }
+  </script>
+</body>
+</html>
