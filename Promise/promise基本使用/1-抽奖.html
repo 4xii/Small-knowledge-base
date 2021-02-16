@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-header">Promise抽奖</h2>
+    <button class="btn btn-primary" id="btn">点击抽奖</button>
+  </div>
+  <script>
+    //生成随机数
+    function rand(m,n){
+      return Math.ceil(Math.random()*(n-m+1)) + m-1;
+    }
+    /* 
+      点击按钮1秒后显示是否中奖 中奖弹出恭喜恭喜 未中奖弹出再接再厉
+    */
+    //获取元素
+    const btn = document.querySelector('#btn');
+    //绑定单击事件
+    btn.addEventListener('click',function(){
+      //定时器
+      // setTimeout(()=>{
+      //   //获取从1-100的一个随机数
+      //   let n = rand(1,100)
+      //   //判断
+      //   if(n <= 30){
+      //     alert('恭喜恭喜')
+      //   } else {
+      //     alert('再接再厉')
+      //   }
+      // },1000)
+
+      //Promise形式实现
+      //resolve 解决 函数类型的数据
+      //reject 拒绝 函数类型的数据
+      const p = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          //获取从1-100的一个随机数
+          let n = rand(1,100)
+          //判断
+          if(n <= 30){
+            resolve(n);//将promise对象的状态设置为成功
+          } else {
+            reject(n);//将promise对象的状态设置为失败
+          }
+        },1000)
+      });
+
+      //调用then方法
+      p.then((value)=>{
+        alert('恭喜恭喜'+value)//value值
+      },(reason)=>{
+        alert('再接再厉'+reason)//reason理由
+      })
+    })
+  </script>
+</body>
+</html>
