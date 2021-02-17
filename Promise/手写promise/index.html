@@ -8,31 +8,79 @@
 </head>
 <body>
   <script>
-    let p = new Promise((resolve,reject)=>{
-      resolve('OK')
-      //reject('error')
-      //抛出异常
-      //throw "error";
-      // setTimeout(()=>{
-      //   resolve('OK')
-      //   //reject('err')
-      // },2000)
-    })
+    // let p = new Promise((resolve,reject)=>{
+    //   //resolve('OK')
+    //   //reject('error')
+    //   //抛出异常
+    //   //throw "error";
+    //   setTimeout(()=>{
+    //     resolve('OK')
+    //     //reject('err')
+    //   },1000)
+    // })
 
     //console.log(p)
-    const res = p.then(value=>{
-      //console.log(value);
-      // return new Promise((resolve,reject) => {
-      //   //resolve("success")
-      //   reject('oh no')
-      // })
-      //抛出异常
-      throw "FAIL"
-    },reason => {
-      console.warn(reason);
+    // const res = p.then(value=>{
+    //   console.log(value);
+    //   // return new Promise((resolve,reject) => {
+    //   //   //resolve("success")
+    //   //   reject('oh no')
+    //   // })
+    //   //抛出异常
+    //   //throw "FAIL"
+    // },reason => {
+    //   //console.warn(reason);
+    //   throw 'error'
+    // })
+
+    // p.catch(reason => {
+    //   console.warn(reason);
+    // })
+    // console.log(res);
+    // p.then().then(value=>{
+    //   console.log(222)
+    // }).then(value=>{
+    //   console.log(333)
+    // })/* .catch(reason => {
+    //   console.warn(reason);
+    // }) */
+
+    // const p = Promise.resolve('OK')
+    // const p2 = Promise.resolve(new Promise((resolve,reject)=>{
+    //   //resolve('Success')
+    //   reject('error')
+    // }))
+    // console.log(p2)
+
+    // const p = Promise.reject('Error')
+    // const p2 = Promise.reject(new Promise((resolve,reject)=>{
+    //   //resolve('Success')
+    //   resolve('OK')
+    // }))
+    // console.log(p2)
+
+    // let p1 = new Promise((resolve,reject)=>{
+    //   setTimeout(()=>{
+    //     resolve('OK');
+    //   })
+    // })
+    // let p2 = Promise.resolve('Success1');
+    // let p3 = Promise.resolve('Oh Yes');
+    // // let result = Promise.all([p1,p2,p3])
+    // let result = Promise.race([p1,p2,p3])
+    // console.log(result)
+
+    let p1 = new Promise((resolve,reject) => {
+      resolve('ok');
+      console.log(111);
     })
 
-    console.log(res);
+    p1.then(value => {
+      console.log(value)
+      console.log(222);
+    })
+
+    console.log(333);
   </script>
 </body>
 </html>
