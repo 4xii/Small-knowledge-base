@@ -48,7 +48,7 @@ class Promise {
   }
 
   //then方法
-  then(nResolved, onRejected) {
+  then(onResolved, onRejected) {
     const self = this;
     //判断回调函数参数
     if (typeof onRejected !== 'function') {
