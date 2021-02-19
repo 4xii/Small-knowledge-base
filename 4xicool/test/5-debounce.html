@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../5-debounce.js"></script>
+</head>
+<body>
+  <input type="text">
+  <script>
+    let input = document.querySelector('input');
+    // input.onkeydown = function(e){
+    //   console.log(e.keyCode);
+    // }
+    input.onkeydown = debounce(function(e){
+      console.log(e.keyCode);
+    },1000)
+  </script>
+</body>
+</html>

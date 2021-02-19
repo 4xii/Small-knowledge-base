@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../6-declares.js"></script>
+</head>
+
+<body>
+  <script>
+    //声明一个数组
+    const arr = [1, 2, 3, 4, 5,2077,5,1024];
+
+    //------------------result-------------------
+    // const result = map(arr,(item) => {
+    //   return item * 10;
+    // })
+    // console.log(result);
+
+    //------------------reduce-------------------
+    // let result = arr.reduce(function(res,value){
+    //   return res + value
+    // },0);    
+    // console.log(result);
+
+    // let result = reduce(arr,function(res,value){
+    //   return res + value
+    // },0)
+    // console.log(result);
+
+    //-------------------filter--------------------
+    //const result = arr.filter(item => item % 2 ===1);
+    //console.log(result);
+
+    // const result = filter(arr,item => item % 2 === 1);
+    // console.log(result);
+
+    //-------------------find-------------------------
+    // const result = arr.find(item=>{
+    //   return item > 3
+    // });
+    // console.log(result);
+
+    // const result = find(arr,item => {
+    //   return item > 3
+    // });
+    // console.log(result);
+
+    //-------------------findIndex-------------------------
+    // const result = arr.findIndex(item=>{
+    //   return item > 3
+    // });
+    // console.log(result);
+
+    // const result = findIndex(arr,item => {
+    //   return item > 3
+    // });
+    // console.log(result);
+
+    //-----------------------every-------------------------
+    // const result = arr.every(item => {
+    //   return item > 0;
+    // })
+    // console.log(result);
+    const result = every(arr,item => {
+      return item > 0;
+    })
+    console.log(result);
+
+    //-----------------------some-------------------------
+    // const result = arr.some(item => {
+    //   return item > 2055;
+    // })
+    // console.log(result);
+  </script>
+</body>
+
+</html>
