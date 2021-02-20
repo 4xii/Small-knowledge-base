@@ -4,16 +4,16 @@
 
 ## 异步编程
 * fs 文件操作
-  ```
+  ```js
   require('fs').readFile('./index.html',(err,data)=>{})
   ```
 * 数据库操作
 * AJAX
-  ```
+  ```js
     $.get('/server',(data)=>{})
   ```
 * 定时器
-  ```
+  ```js
     setTimeout(()=>{},2000)
   ```
 # 指定回调函数的方式更加灵活
