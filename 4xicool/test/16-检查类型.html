@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src = "../16-myInstanceOf.js"></script>
+</head>
+<body>
+  <script>
+    //声明一个构造函数
+    function Person(){}
+    let p = new Person();
+    //检测
+    //console.log(p instanceof Person);
+    console.log(myInstanceOf(p,Person));
+  </script>
+</body>
+</html>

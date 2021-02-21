@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../18-clone.js"></script>
+</head>
+<body>
+  <script>
+    //浅拷贝 函数属性会丢失 循环引用会出错
+    // const obj = { x:'abc',y:{m:1}};
+    // //const result = clone1(obj);
+    // const result = clone2(obj);
+    // //修改新数据中某个引用类型的值
+    // result.y.m = 2;
+    // console.log(result); 
+    // console.log(obj);
+
+    //深拷贝
+    //1.JSON
+    // const obj = {
+    //   a:1,
+    //   b:['e','f','g'],
+    //   c:{h:20},
+    //   //JSON不能克隆方法
+    //   d:function(){}
+    // };
+    // //循环引用
+    // obj.b.push(obj.c);
+    // obj.c.j = obj.b
+    // //深拷贝
+    // const result = deepClone1(obj);
+
+    // //修改新数据的属性值
+    // obj.c.h = 20000;
+
+    // console.log(obj);
+    // console.log(result);
+
+    //2.递归拷贝 循环引用没有解决 循环调用 递归会溢出
+    const obj = {
+      a:1,
+      b:['e','f','g'],
+      c:{h:20},
+      //JSON不能克隆方法
+      d:function(){}
+    }
+    //循环引用
+    obj.b.push(obj.c);
+    obj.c.j = obj.b
+    //const result = deepClone3(obj)
+    const result = deepClone4(obj)
+
+    console.log(obj);
+    console.log(result);
+  </script>
+</body>
+</html>

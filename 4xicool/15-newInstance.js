@@ -7,4 +7,5 @@ function newInstance(Fn,...args){
   obj.__proto__ = Fn.prototype;
   //3.返回新对象
   return result instanceof Object ? result : obj;
+
 }

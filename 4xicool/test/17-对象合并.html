@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../17-mergeObject.js"></script>
+</head>
+
+<body>
+  <script>
+    const object = {
+      a: [{ x: 2 }, { y: 4 }],
+      b: 1
+    }
+    const other = {
+      a: { z: 3 },
+      b: [2, 3],
+      c: 'foo'
+    }
+    console.log(mergeObject(object, other));
+
+  </script>
+</body>
+
+</html>

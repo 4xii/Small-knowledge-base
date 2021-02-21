@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #outter{
+      width: 200px;
+      height:200px;
+      background-color:#89c;
+      position:relative;
+    }
+    #inner{
+      width: 100px;
+      height: 100px;
+      background-color:rgb(153,106,34);
+      position:relative;
+      left:50px;
+      top:50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="outter">
+    <div id="inner">
+
+    </div>
+  </div>
+  <script>
+    //获取元素
+    let outter = document.querySelector('#outter')
+    let inner = document.querySelector('#inner')
+
+    outter.addEventListener('click',function(){
+      console.log('捕获outter');
+    },true)
+
+    inner.addEventListener('click',function(){
+      console.log('捕获inner');
+    },true)
+  </script>
+</body>
+</html>
