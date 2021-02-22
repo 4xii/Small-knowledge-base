@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 为整个脚本(script标签)开启严格模式 -->
+  <script>
+    'use strict';
+    //下面js代码就会按照严格模式执行代码
+  </script>
+  <script>
+    (function(){
+      'use strict'
+    })()
+    </script>
+    <!-- 为某个函数开启严格模式 -->
+    <script>
+      //此时只是给fn函数开启严格模式
+      function fn(){
+        'use strict'
+        //下面的代码按照严格模式执行
+      }
+      function fun(){
+        //里面的还是按照普通模式执行
+      }
+    </script>
+</body>
+</html>

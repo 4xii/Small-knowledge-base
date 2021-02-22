@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>点击</button>
+  <button>点击</button>
+  <button>点击</button>
+  <script>
+
+    //改变函数内this指向 js提供了三种方法 call() apply() bind()
+    /* 
+      总结
+      相同点:都可以改变函数内部的this指向
+      区别点:
+            1.call和apply会调用函数，并且改变函数内部this指向
+            2.call和apply传递的参数不一样，apply必须数组形式[arg]
+            3.bind不会调用函数，可以改变函数内部this指向
+      
+      主要应用场景
+            1.call经常做继承
+            2.apply经常跟数组有关，比如借助于数学对象实现数组最大最小值
+            3.bind 不调用函数，但是还想改变this指向，比如改变定时器内部的this指向
+
+     */
+    //3.bind() 绑定 捆绑的意思
+    var  o = {
+      name:'andy'
+    };
+    
+    function fn(a,b) {
+      console.log(this)
+      console.log(a + b);
+    };
+    var f = fn.bind(o,1,2);
+    f();
+    //1.不会调用原来的函数 可以改变原来函数内部的this 指向
+    //2.返回的是原函数改变this之后产生的新函数
+    //3.如果有的函数我们不需要立即调用 但是又想改变这个函数内部的this指向此时用bind
+    //4.我们有一个按钮，当我们点击了之后，就禁用这个按钮，3秒钟之后开启这个按钮
+    // var btn = document.querySelector('button');
+    // btn.onclick = function (){
+    //   this.disabled = true;//这个this 指向的是 btn 这个按钮
+    //   //var that = this;
+    //   setTimeout(function(){
+    //     //that.disabled = false; //定时器里面的this 指向的是window
+    //     this.disabled = false; //此时定时器函数里面的this 指向的是btn
+    //   }.bind(this),3000);//这个 指向的是 btn 这个按钮
+    // }
+    var btns = document.querySelectorAll('button');
+    for(var i=0;i<btns.length;i++ ){
+      btns[i].onclick = function() {
+        this.disabled = true;
+        setTimeout(function(){
+          this.disabled = false;
+        }.bind(this),2000)
+      }
+    }
+  </script>
+</body>
+</html>

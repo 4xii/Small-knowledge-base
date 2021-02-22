@@ -1,0 +1,1622 @@
+[
+  {
+    "__type__": "cc.AnimationClip",
+    "_name": "walk",
+    "_objFlags": 0,
+    "_native": ".bin",
+    "sample": 30,
+    "speed": 1,
+    "wrapMode": 2,
+    "events": [],
+    "_duration": 0.6666666865348816,
+    "_keys": [
+      {
+        "__id__": 1
+      }
+    ],
+    "_stepness": 0,
+    "curveDatas": {},
+    "_curves": [
+      {
+        "modifiers": [
+          {
+            "__id__": 2
+          },
+          "position"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 3
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 2
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 4
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 2
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 5
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 6
+          },
+          "position"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 7
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 6
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 8
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 6
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 9
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 10
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 11
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 10
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 12
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 10
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 13
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 14
+          },
+          "position"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 15
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 14
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 16
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 14
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 17
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 18
+          },
+          "position"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 19
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 18
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 20
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 18
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 21
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 22
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 23
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 22
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 24
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 22
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 25
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 26
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 27
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 26
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 28
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 26
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 29
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 30
+          },
+          "position"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 31
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 30
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 32
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 30
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 33
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 34
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 35
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 34
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 36
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 34
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 37
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 38
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 39
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 38
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 40
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 38
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 41
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 42
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 43
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 42
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 44
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 42
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 45
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 46
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 47
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 46
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 48
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 46
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 49
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 50
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 51
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 50
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 52
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 50
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 53
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 54
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 55
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 54
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 56
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 54
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 57
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 58
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": 0,
+          "values": {
+            "__id__": 59
+          }
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 58
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 60
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 58
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 61
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 62
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 63
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 62
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 64
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 62
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 65
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 66
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 67
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 66
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 68
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 66
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 69
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 70
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 71
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 70
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 72
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 70
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 73
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 74
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 75
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 74
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 76
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 74
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 77
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 78
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 79
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 78
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 80
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 78
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 81
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 82
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 83
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 82
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 84
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 82
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 85
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 86
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 87
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 86
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 88
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 86
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 89
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 90
+          },
+          "position"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 91
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 90
+          },
+          "scale"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 92
+          },
+          "interpolate": false
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 90
+          },
+          "rotation"
+        ],
+        "data": {
+          "keys": -1,
+          "values": {
+            "__id__": 93
+          },
+          "interpolate": false
+        }
+      }
+    ],
+    "_commonTargets": []
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5208,
+    "_unitCount": 17,
+    "_unitElement": 6,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 0,
+    "_unitCount": 51,
+    "_unitElement": 22,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 204,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 216,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Footsteps"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 232,
+    "_unitCount": 51,
+    "_unitElement": 22,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 436,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 448,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 464,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 736,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 748,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 760,
+    "_unitCount": 51,
+    "_unitElement": 22,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 964,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 1236,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 L Thigh"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 1248,
+    "_unitCount": 51,
+    "_unitElement": 22,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 1452,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 1724,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 L Thigh/Bip002 L Calf"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 1736,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2008,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2020,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 L Thigh/Bip002 L Calf/Bip002 L Foot"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2032,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2304,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2316,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 R Thigh"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2328,
+    "_unitCount": 51,
+    "_unitElement": 22,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2532,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2804,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 R Thigh/Bip002 R Calf"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 2816,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3088,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3100,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 R Thigh/Bip002 R Calf/Bip002 R Foot"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3112,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3384,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3396,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 L Clavicle"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3408,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3680,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3692,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 L Clavicle/Bip002 L UpperArm"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3704,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3976,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 3988,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 R Clavicle"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4000,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4272,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4284,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 R Clavicle/Bip002 R UpperArm"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4296,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4568,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4580,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 Head"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4592,
+    "_unitCount": 68,
+    "_unitElement": 38,
+    "_length": 17
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4864,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4876,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4888,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4900,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4912,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 L Thigh/Bip002 L Calf/Bip002 L Foot/Bip002 L Toe0"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4928,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4940,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4952,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 R Thigh/Bip002 R Calf/Bip002 R Foot/Bip002 R Toe0"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4968,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4980,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 4992,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5008,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5020,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5032,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 L Clavicle/Bip002 L UpperArm/Bip002 L Forearm"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5048,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5060,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5072,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 L Clavicle/Bip002 L UpperArm/Bip002 L Forearm/Bip002 L Hand"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5088,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5100,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5112,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 R Clavicle/Bip002 R UpperArm/Bip002 R Forearm"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5128,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5140,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5152,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "RootNode/Bip002/Bip002 Pelvis/Bip002 Spine/Bip002 Neck/Bip002 R Clavicle/Bip002 R UpperArm/Bip002 R Forearm/Bip002 R Hand"
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5168,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5180,
+    "_unitCount": 3,
+    "_unitElement": 22,
+    "_length": 1
+  },
+  {
+    "__type__": "cc.CompactValueTypeArray",
+    "_byteOffset": 5192,
+    "_unitCount": 4,
+    "_unitElement": 38,
+    "_length": 1
+  }
+]

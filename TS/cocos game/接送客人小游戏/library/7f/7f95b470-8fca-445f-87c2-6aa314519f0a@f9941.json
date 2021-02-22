@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "7f95b470-8fca-445f-87c2-6aa314519f0a",
+    "name": "head1",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 2,
+      "width": 103,
+      "height": 133
+    },
+    "offset": {
+      "x": 0,
+      "y": -1
+    },
+    "originalSize": {
+      "width": 103,
+      "height": 135
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Star(uname,age){
+      this.uname = uname;
+      this.age = age;
+    }
+    Star.prototype.sing = function(){
+      console.log('我会唱歌');
+    }
+    var zsx = new Star('4xi',20);
+    var zxy = new Star('张学友',19);
+    zsx.sing();
+    console.log(zsx); //对象身上系统自己添加一个 __proto__指向我们构造函数的原型对象
+    console.log(zsx.__proto__ === Star.prototype);
+    // 方法的查找规则: 首先先看zsx 对象上是否有sing方法，如果有就执行这个对象上的sing
+    // 如果没有sing 这个方法 ，因为有__proto__的存在，就去构造函数对象prototype身上去查找sing这个方法
+
+    
+  </script>
+</body>
+</html>

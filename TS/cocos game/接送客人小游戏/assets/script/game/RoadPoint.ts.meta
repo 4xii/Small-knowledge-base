@@ -1,0 +1,15 @@
+{
+  "ver": "2.0.13",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "39f3e96c-354c-4926-ab2d-8a257da6be55",
+  "files": [
+    ".js",
+    ".trans"
+  ],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/script/game/RoadPoint.js"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "ver": "2.0.13",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "48493998-fc30-4c63-96f9-8147537bec1c",
+  "files": [
+    ".js",
+    ".trans"
+  ],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/script/game/GameCtril.js"
+  }
+}

@@ -1,0 +1,218 @@
+{
+    "asset": {
+        "generator": "FBX2glTF v0.9.7",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 4816,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 222,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 984,
+            "byteOffset": 224,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 984,
+            "byteOffset": 1208,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1312,
+            "byteOffset": 2192,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 656,
+            "byteOffset": 3504,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 656,
+            "byteOffset": 4160,
+            "target": 34962
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 111,
+            "bufferView": 0,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 82,
+            "bufferView": 1,
+            "byteOffset": 0,
+            "min": [
+                -0.000407131272368133,
+                -0.000482897885376588,
+                -2.93788161798147e-05
+            ],
+            "max": [
+                0.000407131272368133,
+                0.000482897885376588,
+                0.000585280125960708
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 82,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 82,
+            "bufferView": 3,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 82,
+            "bufferView": 4,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 82,
+            "bufferView": 5,
+            "byteOffset": 0
+        }
+    ],
+    "images": [
+        {
+            "name": "stone02.png",
+            "uri": "stone02.png"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "name": "stone02",
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "materials": [
+        {
+            "name": "stone02",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.70710676908493
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "CJ_PoLinKuang_01",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "COLOR_0": 3,
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 4,
+                        "TEXCOORD_1": 5
+                    },
+                    "indices": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "CJ_PoLinKuang_01",
+            "translation": [
+                4.19544948863865e-26,
+                2.57418527896469e-42,
+                3.49366424678976e-10
+            ],
+            "rotation": [
+                0.492529451847076,
+                0.507360517978668,
+                0.507360517978668,
+                -0.492529451847076
+            ],
+            "scale": [
+                133.127487182617,
+                133.127487182617,
+                133.127487182617
+            ],
+            "mesh": 0
+        }
+    ]
+}

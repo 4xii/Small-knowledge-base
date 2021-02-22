@@ -1,0 +1,15 @@
+{
+  "ver": "2.0.13",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "447cce16-27b2-4ef4-b0da-1f4ffa0b35e4",
+  "files": [
+    ".js",
+    ".trans"
+  ],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/script/game/CustomerManager.js"
+  }
+}

@@ -1,0 +1,190 @@
+{
+    "asset": {
+        "generator": "FBX2glTF v0.9.7",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 10844,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 1116,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3648,
+            "byteOffset": 1116,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3648,
+            "byteOffset": 4764,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2432,
+            "byteOffset": 8412,
+            "target": 34962
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 558,
+            "bufferView": 0,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 304,
+            "bufferView": 1,
+            "byteOffset": 0,
+            "min": [
+                -1.57480311393738,
+                -6.86645478253922e-07,
+                1.3113022134803e-07
+            ],
+            "max": [
+                6.86640134972549e-07,
+                2.36220479011536,
+                0.0137798143550754
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 304,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 304,
+            "bufferView": 3,
+            "byteOffset": 0
+        }
+    ],
+    "images": [
+        {
+            "name": "road03.jpg",
+            "uri": "road03.jpg"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "name": "贴图 #7",
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "materials": [
+        {
+            "name": "Material #90",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.70710676908493
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "002",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 3
+                    },
+                    "indices": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "002",
+            "translation": [
+                -3.00000023841858,
+                -2.77392871339543e-07,
+                -1.36684170926049e-11
+            ],
+            "rotation": [
+                -0.500000059604645,
+                -0.499999970197678,
+                -0.499999970197678,
+                0.500000059604645
+            ],
+            "scale": [
+                2.53999996185303,
+                2.53999996185303,
+                2.53999996185303
+            ],
+            "mesh": 0
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "6f0f4b64-9365-48c9-8d0d-4a7f7cb99e26",
+    "name": "homeImgGame",
+    "atlas": "",
+    "rect": {
+      "x": 3,
+      "y": 2,
+      "width": 342,
+      "height": 264
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 348,
+      "height": 268
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

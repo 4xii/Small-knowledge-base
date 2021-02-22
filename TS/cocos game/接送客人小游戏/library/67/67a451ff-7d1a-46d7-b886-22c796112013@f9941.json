@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "67a451ff-7d1a-46d7-b886-22c796112013",
+    "name": "homeIconCar",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 62,
+      "height": 42
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 62,
+      "height": 42
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "cff120bc-c13b-40d3-a0cc-4d4a2a831afa",
+    "name": "homeIconGame",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 1,
+      "width": 54,
+      "height": 93
+    },
+    "offset": {
+      "x": 0,
+      "y": -0.5
+    },
+    "originalSize": {
+      "width": 54,
+      "height": 94
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

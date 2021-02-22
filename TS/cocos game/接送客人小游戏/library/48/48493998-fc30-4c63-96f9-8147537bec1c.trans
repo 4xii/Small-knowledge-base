@@ -1,0 +1,8 @@
+{
+    "resolveMap": {
+        "../data/Constants": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/data/Constants.ts",
+        "./AudioManager": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/game/AudioManager.ts",
+        "./CarManager": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/game/CarManager.ts",
+        "./MapManager": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/game/MapManager.ts"
+    }
+}

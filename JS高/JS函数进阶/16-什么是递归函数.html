@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //递归函数 ：函数内部自己调用自己，这个函数就是递归函数
+    var num = 1;
+    function fn(){
+      console.log('我要打印6句话')
+      if(num == 6){
+        return;//递归里面必须加退出条件 否则不断增加作用域 产生栈溢出
+      }
+      num++;
+      fn();
+    }
+    fn();
+  </script>
+</body>
+</html>

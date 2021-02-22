@@ -1,0 +1,896 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "util/sequence-anim",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "name": "opaque",
+      "passes": [
+        {
+          "program": "util/sequence-anim|unlit-vs:vert|unlit-fs:frag",
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "tilingOffset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "mainColor": {
+              "value": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "editor": {
+                "type": "color"
+              },
+              "type": 16
+            },
+            "colorScale": {
+              "value": [
+                1,
+                1,
+                1
+              ],
+              "type": 15,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                0,
+                15
+              ]
+            },
+            "alphaThreshold": {
+              "value": [
+                0.5
+              ],
+              "editor": {
+                "parent": "USE_ALPHA_TEST"
+              },
+              "type": 13,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                3,
+                13
+              ]
+            },
+            "dimensions": {
+              "value": [
+                2,
+                2
+              ],
+              "type": 14,
+              "handleInfo": [
+                "seqAnimParams",
+                0,
+                14
+              ]
+            },
+            "frames": {
+              "value": [
+                4
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                2,
+                13
+              ]
+            },
+            "speedOrProgress": {
+              "value": [
+                10
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                3,
+                13
+              ]
+            },
+            "colorScaleAndCutoff": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                1,
+                1,
+                1,
+                0.5
+              ]
+            },
+            "seqAnimParams": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                2,
+                2,
+                4,
+                10
+              ]
+            }
+          },
+          "migrations": {
+            "properties": {
+              "dimensions": {
+                "formerlySerializedAs": "constants.xy"
+              },
+              "frames": {
+                "formerlySerializedAs": "constants.z"
+              },
+              "speedOrProgress": {
+                "formerlySerializedAs": "constants.w"
+              },
+              "mainTexture": {
+                "formerlySerializedAs": "seqTexture"
+              },
+              "mainColor": {
+                "formerlySerializedAs": "weight"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "transparent",
+      "passes": [
+        {
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "util/sequence-anim|unlit-vs:vert|unlit-fs:frag",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "tilingOffset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "mainColor": {
+              "value": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "editor": {
+                "type": "color"
+              },
+              "type": 16
+            },
+            "colorScale": {
+              "value": [
+                1,
+                1,
+                1
+              ],
+              "type": 15,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                0,
+                15
+              ]
+            },
+            "alphaThreshold": {
+              "value": [
+                0.5
+              ],
+              "editor": {
+                "parent": "USE_ALPHA_TEST"
+              },
+              "type": 13,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                3,
+                13
+              ]
+            },
+            "dimensions": {
+              "value": [
+                2,
+                2
+              ],
+              "type": 14,
+              "handleInfo": [
+                "seqAnimParams",
+                0,
+                14
+              ]
+            },
+            "frames": {
+              "value": [
+                4
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                2,
+                13
+              ]
+            },
+            "speedOrProgress": {
+              "value": [
+                10
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                3,
+                13
+              ]
+            },
+            "colorScaleAndCutoff": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                1,
+                1,
+                1,
+                0.5
+              ]
+            },
+            "seqAnimParams": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                2,
+                2,
+                4,
+                10
+              ]
+            }
+          },
+          "migrations": {
+            "properties": {
+              "dimensions": {
+                "formerlySerializedAs": "constants.xy"
+              },
+              "frames": {
+                "formerlySerializedAs": "constants.z"
+              },
+              "speedOrProgress": {
+                "formerlySerializedAs": "constants.w"
+              },
+              "mainTexture": {
+                "formerlySerializedAs": "seqTexture"
+              },
+              "mainColor": {
+                "formerlySerializedAs": "weight"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "add",
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 1,
+                "blendSrcAlpha": 2,
+                "blendDstAlpha": 1
+              }
+            ]
+          },
+          "program": "util/sequence-anim|unlit-vs:vert|unlit-fs:frag",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "tilingOffset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "mainColor": {
+              "value": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "editor": {
+                "type": "color"
+              },
+              "type": 16
+            },
+            "colorScale": {
+              "value": [
+                1,
+                1,
+                1
+              ],
+              "type": 15,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                0,
+                15
+              ]
+            },
+            "alphaThreshold": {
+              "value": [
+                0.5
+              ],
+              "editor": {
+                "parent": "USE_ALPHA_TEST"
+              },
+              "type": 13,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                3,
+                13
+              ]
+            },
+            "dimensions": {
+              "value": [
+                2,
+                2
+              ],
+              "type": 14,
+              "handleInfo": [
+                "seqAnimParams",
+                0,
+                14
+              ]
+            },
+            "frames": {
+              "value": [
+                4
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                2,
+                13
+              ]
+            },
+            "speedOrProgress": {
+              "value": [
+                10
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                3,
+                13
+              ]
+            },
+            "colorScaleAndCutoff": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                1,
+                1,
+                1,
+                0.5
+              ]
+            },
+            "seqAnimParams": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                2,
+                2,
+                4,
+                10
+              ]
+            }
+          },
+          "migrations": {
+            "properties": {
+              "dimensions": {
+                "formerlySerializedAs": "constants.xy"
+              },
+              "frames": {
+                "formerlySerializedAs": "constants.z"
+              },
+              "speedOrProgress": {
+                "formerlySerializedAs": "constants.w"
+              },
+              "mainTexture": {
+                "formerlySerializedAs": "seqTexture"
+              },
+              "mainColor": {
+                "formerlySerializedAs": "weight"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "alpha-blend",
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendSrcAlpha": 2,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "util/sequence-anim|unlit-vs:vert|unlit-fs:frag",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "tilingOffset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "mainColor": {
+              "value": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "editor": {
+                "type": "color"
+              },
+              "type": 16
+            },
+            "colorScale": {
+              "value": [
+                1,
+                1,
+                1
+              ],
+              "type": 15,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                0,
+                15
+              ]
+            },
+            "alphaThreshold": {
+              "value": [
+                0.5
+              ],
+              "editor": {
+                "parent": "USE_ALPHA_TEST"
+              },
+              "type": 13,
+              "handleInfo": [
+                "colorScaleAndCutoff",
+                3,
+                13
+              ]
+            },
+            "dimensions": {
+              "value": [
+                2,
+                2
+              ],
+              "type": 14,
+              "handleInfo": [
+                "seqAnimParams",
+                0,
+                14
+              ]
+            },
+            "frames": {
+              "value": [
+                4
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                2,
+                13
+              ]
+            },
+            "speedOrProgress": {
+              "value": [
+                10
+              ],
+              "type": 13,
+              "handleInfo": [
+                "seqAnimParams",
+                3,
+                13
+              ]
+            },
+            "colorScaleAndCutoff": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                1,
+                1,
+                1,
+                0.5
+              ]
+            },
+            "seqAnimParams": {
+              "type": 16,
+              "editor": {
+                "visible": false,
+                "deprecated": true
+              },
+              "value": [
+                2,
+                2,
+                4,
+                10
+              ]
+            }
+          },
+          "migrations": {
+            "properties": {
+              "dimensions": {
+                "formerlySerializedAs": "constants.xy"
+              },
+              "frames": {
+                "formerlySerializedAs": "constants.z"
+              },
+              "speedOrProgress": {
+                "formerlySerializedAs": "constants.w"
+              },
+              "mainTexture": {
+                "formerlySerializedAs": "seqTexture"
+              },
+              "mainColor": {
+                "formerlySerializedAs": "weight"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "hash": 68560743,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nlayout(binding = 23) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\n#if USE_BATCHING\n  layout(location = 1) in float a_dyn_batch_id;\n  layout(binding = 21) uniform CCLocalBatched {\n    highp mat4 cc_matWorlds[10];\n  };\n#else\nlayout(binding = 21) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n};\n#endif\nlayout(location = 0) in vec3 a_position;\n#if USE_SKINNING\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nlayout(location = 2) in vec4 a_weights;\nlayout(location = 3) in vec4 a_joints;\nlayout(binding = 18) uniform CCSkinningTexture {\n  highp vec4 cc_jointsTextureInfo;\n};\nlayout(binding = 19) uniform CCSkinningAnimation {\n  highp vec4 cc_jointsAnimInfo;\n};\nlayout(binding = 25) uniform sampler2D cc_jointsTexture;\n#if USE_SKINNING == 1\n  highp float decode32 (highp vec4 rgba) {\n    rgba = rgba * 255.0;\n    highp float Sign = 1.0 - step(128.0, rgba[3]) * 2.0;\n    highp float Exponent = 2.0 * mod(rgba[3], 128.0) + step(128.0, rgba[2]) - 127.0;\n    highp float Mantissa = mod(rgba[2], 128.0) * 65536.0 + rgba[1] * 256.0 + rgba[0] + 8388608.0;\n    return Sign * exp2(Exponent - 23.0) * Mantissa;\n  }\n#endif\n#if USE_SKINNING == 1\n  mat4 getJointMatrix (float i) {\n    highp float j = 12.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 3.5) * invSize, y)))\n    );\n    vec4 v2 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 4.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 5.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 6.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 7.5) * invSize, y)))\n    );\n    vec4 v3 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 8.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 9.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 10.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 11.5) * invSize, y)))\n    );\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#elif USE_SKINNING == 2\n  mat4 getJointMatrix (float i) {\n    highp float j = 3.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y));\n    vec4 v2 = texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y));\n    vec4 v3 = texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y));\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#endif\nmat4 skinMatrix () {\n  return getJointMatrix(a_joints.x) * a_weights.x\n    + getJointMatrix(a_joints.y) * a_weights.y;\n    + getJointMatrix(a_joints.z) * a_weights.z;\n    + getJointMatrix(a_joints.w) * a_weights.w;\n}\nvoid CCSkin (inout vec4 position) {\n  mat4 m = skinMatrix();\n  position = m * position;\n}\nvoid CCSkin (inout StandardVertInput attr) {\n  mat4 m = skinMatrix();\n  attr.position = m * attr.position;\n  attr.normal = (m * vec4(attr.normal, 0.0)).xyz;\n  attr.tangent.xyz = (m * vec4(attr.tangent.xyz, 0.0)).xyz;\n}\n#endif\n#if USE_VERTEX_COLOR\n  layout(location = 4) in vec4 a_color;\n  layout(location = 0) out vec4 v_color;\n#endif\n#if USE_TEXTURE\n  layout(location = 5) in vec2 a_texCoord;\n  layout(location = 1) out vec2 v_uv;\n  layout(binding = 0) uniform TexCoords {\n    vec4 tilingOffset;\n  };\n  #if USE_SEQUENCE_ANIM\n    layout(binding = 1) uniform SeqAnimConstants {\n      vec4 seqAnimParams;\n    };\n  #endif\n#endif\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  #if USE_SKINNING\n    CCSkin(position);\n  #endif\n  mat4 matWorld;\n  #if USE_BATCHING\n    matWorld = cc_matWorlds[int(a_dyn_batch_id + 0.5)];\n  #else\n    matWorld = cc_matWorld;\n  #endif\n  #if USE_TEXTURE\n    v_uv = a_texCoord;\n    #if FLIP_UV\n      v_uv.y = 1.0 - v_uv.y;\n    #endif\n    v_uv = v_uv * tilingOffset.xy + tilingOffset.zw;\n    #if USE_SEQUENCE_ANIM\n      #if MANUAL_PLAYBACK\n        float seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, 0.999) * seqAnimParams.z;\n      #else\n        float seqAnimCurFrame = mod(cc_time.x, seqAnimParams.z / seqAnimParams.w) * seqAnimParams.w;\n      #endif\n      vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, seqAnimParams.x), seqAnimCurFrame / seqAnimParams.x));\n      v_uv = (v_uv + seqAnimOffset) / seqAnimParams.xy;\n    #endif\n  #endif\n  #if USE_VERTEX_COLOR\n    v_color = a_color;\n  #endif\n  return cc_matProj * (cc_matView * matWorld) * position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(binding = 23) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\n#if USE_ALPHA_TEST\n#endif\n#if USE_TEXTURE\n  layout(location = 1) in vec2 v_uv;\n  layout(binding = 30) uniform sampler2D mainTexture;\n#endif\nlayout(binding = 2) uniform Constant {\n  vec4 mainColor;\n  vec4 colorScaleAndCutoff;\n};\n#if USE_VERTEX_COLOR\n  layout(location = 0) in vec4 v_color;\n#endif\nvec4 frag () {\n  vec4 o = mainColor;\n  o.rgb *= colorScaleAndCutoff.xyz;\n  #if USE_VERTEX_COLOR\n    o *= v_color;\n  #endif\n  #if USE_TEXTURE\n    o *= texture(mainTexture, v_uv);\n  #endif\n  #if USE_ALPHA_TEST\n    if (o.ALPHA_TEST_CHANNEL < colorScaleAndCutoff.w) discard;\n  #endif\n  return CCFragOutput(o);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nuniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\n#if USE_BATCHING\n  in float a_dyn_batch_id;\n  uniform CCLocalBatched {\n    highp mat4 cc_matWorlds[10];\n  };\n#else\nuniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n};\n#endif\nin vec3 a_position;\n#if USE_SKINNING\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nin vec4 a_weights;\nin vec4 a_joints;\nuniform CCSkinningTexture {\n  highp vec4 cc_jointsTextureInfo;\n};\nuniform CCSkinningAnimation {\n  highp vec4 cc_jointsAnimInfo;\n};\nuniform sampler2D cc_jointsTexture;\n#if USE_SKINNING == 1\n  highp float decode32 (highp vec4 rgba) {\n    rgba = rgba * 255.0;\n    highp float Sign = 1.0 - step(128.0, rgba[3]) * 2.0;\n    highp float Exponent = 2.0 * mod(rgba[3], 128.0) + step(128.0, rgba[2]) - 127.0;\n    highp float Mantissa = mod(rgba[2], 128.0) * 65536.0 + rgba[1] * 256.0 + rgba[0] + 8388608.0;\n    return Sign * exp2(Exponent - 23.0) * Mantissa;\n  }\n#endif\n#if USE_SKINNING == 1\n  mat4 getJointMatrix (float i) {\n    highp float j = 12.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 3.5) * invSize, y)))\n    );\n    vec4 v2 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 4.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 5.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 6.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 7.5) * invSize, y)))\n    );\n    vec4 v3 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 8.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 9.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 10.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 11.5) * invSize, y)))\n    );\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#elif USE_SKINNING == 2\n  mat4 getJointMatrix (float i) {\n    highp float j = 3.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y));\n    vec4 v2 = texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y));\n    vec4 v3 = texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y));\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#endif\nmat4 skinMatrix () {\n  return getJointMatrix(a_joints.x) * a_weights.x\n    + getJointMatrix(a_joints.y) * a_weights.y;\n    + getJointMatrix(a_joints.z) * a_weights.z;\n    + getJointMatrix(a_joints.w) * a_weights.w;\n}\nvoid CCSkin (inout vec4 position) {\n  mat4 m = skinMatrix();\n  position = m * position;\n}\nvoid CCSkin (inout StandardVertInput attr) {\n  mat4 m = skinMatrix();\n  attr.position = m * attr.position;\n  attr.normal = (m * vec4(attr.normal, 0.0)).xyz;\n  attr.tangent.xyz = (m * vec4(attr.tangent.xyz, 0.0)).xyz;\n}\n#endif\n#if USE_VERTEX_COLOR\n  in vec4 a_color;\n  out vec4 v_color;\n#endif\n#if USE_TEXTURE\n  in vec2 a_texCoord;\n  out vec2 v_uv;\n  uniform TexCoords {\n    vec4 tilingOffset;\n  };\n  #if USE_SEQUENCE_ANIM\n    uniform SeqAnimConstants {\n      vec4 seqAnimParams;\n    };\n  #endif\n#endif\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  #if USE_SKINNING\n    CCSkin(position);\n  #endif\n  mat4 matWorld;\n  #if USE_BATCHING\n    matWorld = cc_matWorlds[int(a_dyn_batch_id + 0.5)];\n  #else\n    matWorld = cc_matWorld;\n  #endif\n  #if USE_TEXTURE\n    v_uv = a_texCoord;\n    #if FLIP_UV\n      v_uv.y = 1.0 - v_uv.y;\n    #endif\n    v_uv = v_uv * tilingOffset.xy + tilingOffset.zw;\n    #if USE_SEQUENCE_ANIM\n      #if MANUAL_PLAYBACK\n        float seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, 0.999) * seqAnimParams.z;\n      #else\n        float seqAnimCurFrame = mod(cc_time.x, seqAnimParams.z / seqAnimParams.w) * seqAnimParams.w;\n      #endif\n      vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, seqAnimParams.x), seqAnimCurFrame / seqAnimParams.x));\n      v_uv = (v_uv + seqAnimOffset) / seqAnimParams.xy;\n    #endif\n  #endif\n  #if USE_VERTEX_COLOR\n    v_color = a_color;\n  #endif\n  return cc_matProj * (cc_matView * matWorld) * position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\n#if USE_ALPHA_TEST\n#endif\n#if USE_TEXTURE\n  in vec2 v_uv;\n  uniform sampler2D mainTexture;\n#endif\nuniform Constant {\n  vec4 mainColor;\n  vec4 colorScaleAndCutoff;\n};\n#if USE_VERTEX_COLOR\n  in vec4 v_color;\n#endif\nvec4 frag () {\n  vec4 o = mainColor;\n  o.rgb *= colorScaleAndCutoff.xyz;\n  #if USE_VERTEX_COLOR\n    o *= v_color;\n  #endif\n  #if USE_TEXTURE\n    o *= texture(mainTexture, v_uv);\n  #endif\n  #if USE_ALPHA_TEST\n    if (o.ALPHA_TEST_CHANNEL < colorScaleAndCutoff.w) discard;\n  #endif\n  return CCFragOutput(o);\n}\nout vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nuniform highp vec4 cc_time;\nuniform highp mat4 cc_matView;\nuniform highp mat4 cc_matProj;\n#if USE_BATCHING\n  attribute float a_dyn_batch_id;\n  uniform highp mat4 cc_matWorlds[10];\n#else\nuniform highp mat4 cc_matWorld;\n#endif\nattribute vec3 a_position;\n#if USE_SKINNING\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nattribute vec4 a_weights;\nattribute vec4 a_joints;\nuniform highp vec4 cc_jointsTextureInfo;\nuniform highp vec4 cc_jointsAnimInfo;\nuniform sampler2D cc_jointsTexture;\n#if USE_SKINNING == 1\n  highp float decode32 (highp vec4 rgba) {\n    rgba = rgba * 255.0;\n    highp float Sign = 1.0 - step(128.0, rgba[3]) * 2.0;\n    highp float Exponent = 2.0 * mod(rgba[3], 128.0) + step(128.0, rgba[2]) - 127.0;\n    highp float Mantissa = mod(rgba[2], 128.0) * 65536.0 + rgba[1] * 256.0 + rgba[0] + 8388608.0;\n    return Sign * exp2(Exponent - 23.0) * Mantissa;\n  }\n#endif\n#if USE_SKINNING == 1\n  mat4 getJointMatrix (float i) {\n    highp float j = 12.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = vec4(\n      decode32(texture2D(cc_jointsTexture, vec2((x + 0.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 1.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 2.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 3.5) * invSize, y)))\n    );\n    vec4 v2 = vec4(\n      decode32(texture2D(cc_jointsTexture, vec2((x + 4.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 5.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 6.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 7.5) * invSize, y)))\n    );\n    vec4 v3 = vec4(\n      decode32(texture2D(cc_jointsTexture, vec2((x + 8.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 9.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 10.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 11.5) * invSize, y)))\n    );\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#elif USE_SKINNING == 2\n  mat4 getJointMatrix (float i) {\n    highp float j = 3.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = texture2D(cc_jointsTexture, vec2((x + 0.5) * invSize, y));\n    vec4 v2 = texture2D(cc_jointsTexture, vec2((x + 1.5) * invSize, y));\n    vec4 v3 = texture2D(cc_jointsTexture, vec2((x + 2.5) * invSize, y));\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#endif\nmat4 skinMatrix () {\n  return getJointMatrix(a_joints.x) * a_weights.x\n    + getJointMatrix(a_joints.y) * a_weights.y;\n    + getJointMatrix(a_joints.z) * a_weights.z;\n    + getJointMatrix(a_joints.w) * a_weights.w;\n}\nvoid CCSkin (inout vec4 position) {\n  mat4 m = skinMatrix();\n  position = m * position;\n}\nvoid CCSkin (inout StandardVertInput attr) {\n  mat4 m = skinMatrix();\n  attr.position = m * attr.position;\n  attr.normal = (m * vec4(attr.normal, 0.0)).xyz;\n  attr.tangent.xyz = (m * vec4(attr.tangent.xyz, 0.0)).xyz;\n}\n#endif\n#if USE_VERTEX_COLOR\n  attribute vec4 a_color;\n  varying vec4 v_color;\n#endif\n#if USE_TEXTURE\n  attribute vec2 a_texCoord;\n  varying vec2 v_uv;\n  uniform vec4 tilingOffset;\n  #if USE_SEQUENCE_ANIM\n    uniform vec4 seqAnimParams;\n  #endif\n#endif\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  #if USE_SKINNING\n    CCSkin(position);\n  #endif\n  mat4 matWorld;\n  #if USE_BATCHING\n    matWorld = cc_matWorlds[int(a_dyn_batch_id + 0.5)];\n  #else\n    matWorld = cc_matWorld;\n  #endif\n  #if USE_TEXTURE\n    v_uv = a_texCoord;\n    #if FLIP_UV\n      v_uv.y = 1.0 - v_uv.y;\n    #endif\n    v_uv = v_uv * tilingOffset.xy + tilingOffset.zw;\n    #if USE_SEQUENCE_ANIM\n      #if MANUAL_PLAYBACK\n        float seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, 0.999) * seqAnimParams.z;\n      #else\n        float seqAnimCurFrame = mod(cc_time.x, seqAnimParams.z / seqAnimParams.w) * seqAnimParams.w;\n      #endif\n      vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, seqAnimParams.x), seqAnimCurFrame / seqAnimParams.x));\n      v_uv = (v_uv + seqAnimOffset) / seqAnimParams.xy;\n    #endif\n  #endif\n  #if USE_VERTEX_COLOR\n    v_color = a_color;\n  #endif\n  return cc_matProj * (cc_matView * matWorld) * position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform mediump vec4 cc_exposure;\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\n#if USE_ALPHA_TEST\n#endif\n#if USE_TEXTURE\n  varying vec2 v_uv;\n  uniform sampler2D mainTexture;\n#endif\nuniform vec4 mainColor;\nuniform vec4 colorScaleAndCutoff;\n#if USE_VERTEX_COLOR\n  varying vec4 v_color;\n#endif\nvec4 frag () {\n  vec4 o = mainColor;\n  o.rgb *= colorScaleAndCutoff.xyz;\n  #if USE_VERTEX_COLOR\n    o *= v_color;\n  #endif\n  #if USE_TEXTURE\n    o *= texture2D(mainTexture, v_uv);\n  #endif\n  #if USE_ALPHA_TEST\n    if (o.ALPHA_TEST_CHANNEL < colorScaleAndCutoff.w) discard;\n  #endif\n  return CCFragOutput(o);\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            }
+          ],
+          "samplers": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocalBatched",
+              "defines": [
+                "USE_BATCHING"
+              ]
+            },
+            {
+              "name": "CCLocal",
+              "defines": []
+            },
+            {
+              "name": "CCSkinningTexture",
+              "defines": [
+                "USE_SKINNING"
+              ]
+            },
+            {
+              "name": "CCSkinningAnimation",
+              "defines": [
+                "USE_SKINNING"
+              ]
+            }
+          ],
+          "samplers": [
+            {
+              "name": "cc_jointsTexture",
+              "defines": [
+                "USE_SKINNING"
+              ]
+            }
+          ]
+        }
+      },
+      "defines": [
+        {
+          "name": "USE_BATCHING",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_SKINNING",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_VERTEX_COLOR",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_TEXTURE",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_SEQUENCE_ANIM",
+          "type": "boolean",
+          "defines": [
+            "USE_TEXTURE"
+          ]
+        },
+        {
+          "name": "FLIP_UV",
+          "type": "boolean",
+          "defines": [
+            "USE_TEXTURE"
+          ]
+        },
+        {
+          "name": "MANUAL_PLAYBACK",
+          "type": "boolean",
+          "defines": [
+            "USE_TEXTURE",
+            "USE_SEQUENCE_ANIM"
+          ]
+        },
+        {
+          "name": "CC_USE_HDR",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_ALPHA_TEST",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "ALPHA_TEST_CHANNEL",
+          "type": "string",
+          "defines": [
+            "USE_ALPHA_TEST"
+          ],
+          "options": [
+            "a",
+            "r",
+            "g",
+            "b"
+          ]
+        }
+      ],
+      "blocks": [
+        {
+          "name": "TexCoords",
+          "members": [
+            {
+              "name": "tilingOffset",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [
+            "USE_TEXTURE"
+          ],
+          "binding": 0
+        },
+        {
+          "name": "SeqAnimConstants",
+          "members": [
+            {
+              "name": "seqAnimParams",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [
+            "USE_TEXTURE",
+            "USE_SEQUENCE_ANIM"
+          ],
+          "binding": 1
+        },
+        {
+          "name": "Constant",
+          "members": [
+            {
+              "name": "mainColor",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "colorScaleAndCutoff",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "binding": 2
+        }
+      ],
+      "samplers": [
+        {
+          "name": "mainTexture",
+          "type": 28,
+          "count": 1,
+          "defines": [
+            "USE_TEXTURE"
+          ],
+          "binding": 30
+        }
+      ],
+      "attributes": [
+        {
+          "tags": [
+            "USE_BATCHING"
+          ],
+          "name": "a_dyn_batch_id",
+          "type": 13,
+          "count": 1,
+          "defines": [
+            "USE_BATCHING"
+          ],
+          "location": 1
+        },
+        {
+          "name": "a_position",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "location": 0
+        },
+        {
+          "name": "a_weights",
+          "type": 16,
+          "count": 1,
+          "defines": [
+            "USE_SKINNING"
+          ],
+          "location": 2
+        },
+        {
+          "name": "a_joints",
+          "type": 16,
+          "count": 1,
+          "defines": [
+            "USE_SKINNING"
+          ],
+          "location": 3
+        },
+        {
+          "tags": [
+            "USE_VERTEX_COLOR"
+          ],
+          "name": "a_color",
+          "type": 16,
+          "count": 1,
+          "defines": [
+            "USE_VERTEX_COLOR"
+          ],
+          "location": 4
+        },
+        {
+          "tags": [
+            "USE_TEXTURE"
+          ],
+          "name": "a_texCoord",
+          "type": 14,
+          "count": 1,
+          "defines": [
+            "USE_TEXTURE"
+          ],
+          "location": 5
+        }
+      ],
+      "varyings": [
+        {
+          "name": "v_color",
+          "type": 16,
+          "count": 1,
+          "defines": [
+            "USE_VERTEX_COLOR"
+          ],
+          "location": 0
+        },
+        {
+          "name": "v_uv",
+          "type": 14,
+          "count": 1,
+          "defines": [
+            "USE_TEXTURE"
+          ],
+          "location": 1
+        }
+      ],
+      "record": null,
+      "name": "util/sequence-anim|unlit-vs:vert|unlit-fs:frag"
+    }
+  ],
+  "combinations": []
+}

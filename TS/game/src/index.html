@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贪吃蛇</title>
+</head>
+<body>
+  <!--  创建游戏主容器 -->
+  <div id="main">
+    <!-- 设置游戏舞台 -->
+    <div id="stage">
+      <!-- 设置蛇 -->
+      <div id="snake">
+        <!-- snake内部的div 表示蛇的各部分 -->
+        <div><img src="./src/style/1.jpg" class="img"></div>
+      </div>
+
+      <!-- 设置食物 -->
+      <div id="food">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- 设置游戏计分牌 -->
+    <div id="score-panel">
+      <div>
+        SCORE:<span id="score">0</span>
+      </div>
+      <div>
+        level:<span id="level">1</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

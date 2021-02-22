@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "fced9f51-4e66-4865-b448-8d92b63a0ada",
+    "name": "homeIconDaily",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 118,
+      "height": 129
+    },
+    "offset": {
+      "x": 0,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 118,
+      "height": 130
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

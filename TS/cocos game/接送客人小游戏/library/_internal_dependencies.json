@@ -1,0 +1,353 @@
+{
+  "file2uuids": {
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\vert.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\particle-common.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\cc-global.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0",
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
+      "1d08ef62-a503-4ce2-8b9a-46c90873f7d3",
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "511d2633-09a7-4bdd-ac42-f778032124b3",
+      "31b152ff-f689-4082-a292-3eb5a0b33014",
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "871c3b6c-7379-419d-bda3-794b239ab90d",
+      "9d6c6bde-2fe2-44ee-883b-909608948b04",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de",
+      "cb2c332a-fa5e-4235-a129-f011634bb7ad",
+      "4736e978-c8fa-449f-9cf6-fe0158ded9d7",
+      "ba35f02e-a81c-464c-bfc5-c788328da667",
+      "a3e72674-c38f-4336-a285-1826b1799cd7",
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\cc-local.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0",
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
+      "1d08ef62-a503-4ce2-8b9a-46c90873f7d3",
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "9d6c6bde-2fe2-44ee-883b-909608948b04",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de",
+      "cb2c332a-fa5e-4235-a129-f011634bb7ad",
+      "ba35f02e-a81c-464c-bfc5-c788328da667",
+      "a3e72674-c38f-4336-a285-1826b1799cd7",
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\transform.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\tinted-fs.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\output.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0",
+      "1d08ef62-a503-4ce2-8b9a-46c90873f7d3",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "871c3b6c-7379-419d-bda3-794b239ab90d",
+      "9d6c6bde-2fe2-44ee-883b-909608948b04",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de",
+      "cb2c332a-fa5e-4235-a129-f011634bb7ad",
+      "4736e978-c8fa-449f-9cf6-fe0158ded9d7",
+      "ba35f02e-a81c-464c-bfc5-c788328da667",
+      "a3e72674-c38f-4336-a285-1826b1799cd7",
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\gamma.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0",
+      "1d08ef62-a503-4ce2-8b9a-46c90873f7d3",
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "511d2633-09a7-4bdd-ac42-f778032124b3",
+      "31b152ff-f689-4082-a292-3eb5a0b33014",
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "871c3b6c-7379-419d-bda3-794b239ab90d",
+      "9d6c6bde-2fe2-44ee-883b-909608948b04",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de",
+      "cb2c332a-fa5e-4235-a129-f011634bb7ad",
+      "4736e978-c8fa-449f-9cf6-fe0158ded9d7",
+      "ba35f02e-a81c-464c-bfc5-c788328da667",
+      "a3e72674-c38f-4336-a285-1826b1799cd7",
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\no-tint-fs.chunk": [
+      "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\particle-trail.chunk": [
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\particle-vs-legacy.chunk": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\sprite-vs.chunk": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
+      "9d6c6bde-2fe2-44ee-883b-909608948b04"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\sprite-fs.chunk": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
+      "9d6c6bde-2fe2-44ee-883b-909608948b04"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\standard-vs.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\cc-local-batch.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\input-standard.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\decode-standard.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\decode-base.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\cc-skinning.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\skinning-lbs.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\shared-ubos.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\standard-fs.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\shading-standard.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\cc-environment.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "511d2633-09a7-4bdd-ac42-f778032124b3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\unpack.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "511d2633-09a7-4bdd-ac42-f778032124b3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\texture-lod.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\common.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "31b152ff-f689-4082-a292-3eb5a0b33014",
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521",
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\lighting.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\cc-forward-light.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\output-standard.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "511d2633-09a7-4bdd-ac42-f778032124b3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\aces.chunk": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "a7612b54-35e3-4238-a1a9-4a7b54635839",
+      "511d2633-09a7-4bdd-ac42-f778032124b3",
+      "31b152ff-f689-4082-a292-3eb5a0b33014",
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\terrain-vs.chunk": [
+      "1d08ef62-a503-4ce2-8b9a-46c90873f7d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\terrain-fs.chunk": [
+      "1d08ef62-a503-4ce2-8b9a-46c90873f7d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\outline-vs.chunk": [
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\outline-fs.chunk": [
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\toon-vs.chunk": [
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\toon-fs.chunk": [
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\shading-toon.chunk": [
+      "a7612b54-35e3-4238-a1a9-4a7b54635839"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\unlit-vs.chunk": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\input.chunk": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\decode.chunk": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "511d2633-09a7-4bdd-ac42-f778032124b3",
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "871c3b6c-7379-419d-bda3-794b239ab90d",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\unlit-fs.chunk": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+      "f1556893-88b6-4c65-8c16-a5256ef3ad25",
+      "27cc5a0b-ec0b-4a67-98cf-b42d4fa971de"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\profiler-vs.chunk": [
+      "871c3b6c-7379-419d-bda3-794b239ab90d"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\profiler-fs.chunk": [
+      "871c3b6c-7379-419d-bda3-794b239ab90d"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\gizmo-vs.chunk": [
+      "9d6c6bde-2fe2-44ee-883b-909608948b04"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\gizmo-fs.chunk": [
+      "9d6c6bde-2fe2-44ee-883b-909608948b04"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\rect-area-light.chunk": [
+      "9d6c6bde-2fe2-44ee-883b-909608948b04"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\line-vs.chunk": [
+      "9d6c6bde-2fe2-44ee-883b-909608948b04"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\line-fs.chunk": [
+      "9d6c6bde-2fe2-44ee-883b-909608948b04"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\grid-vs.chunk": [
+      "cb2c332a-fa5e-4235-a129-f011634bb7ad",
+      "4736e978-c8fa-449f-9cf6-fe0158ded9d7",
+      "ba35f02e-a81c-464c-bfc5-c788328da667"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\grid-fs.chunk": [
+      "cb2c332a-fa5e-4235-a129-f011634bb7ad",
+      "4736e978-c8fa-449f-9cf6-fe0158ded9d7",
+      "ba35f02e-a81c-464c-bfc5-c788328da667"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\light-vs.chunk": [
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\ubo.chunk": [
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\light-fs.chunk": [
+      "e4e4cb19-8dd2-450d-ad20-1a818263b8d3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\terrain-brush-vs.chunk": [
+      "a3e72674-c38f-4336-a285-1826b1799cd7"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\terrain-brush-fs.chunk": [
+      "a3e72674-c38f-4336-a285-1826b1799cd7"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\planar-shadow-vs.chunk": [
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\cc-shadow.chunk": [
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\planar-shadow-fs.chunk": [
+      "9361fd90-ba52-4f84-aa93-6e878fd576ca"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\sky-vs.chunk": [
+      "511d2633-09a7-4bdd-ac42-f778032124b3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\sky-fs.chunk": [
+      "511d2633-09a7-4bdd-ac42-f778032124b3"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\smaa-edge-vs.chunk": [
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\smaa-edge-fs.chunk": [
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\smaa-blend-vs.chunk": [
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\smaa-blend-fs.chunk": [
+      "6624c63c-0e3d-4d5f-bd15-a7805b71c521"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\tonemap-vs.chunk": [
+      "31b152ff-f689-4082-a292-3eb5a0b33014"
+    ],
+    "D:\\读书\\前端\\cocos\\CocosCreator3D\\resources\\app.asar.unpacked\\builtin\\asset-db\\static\\internal\\assets\\chunks\\tonemap-fs.chunk": [
+      "31b152ff-f689-4082-a292-3eb5a0b33014"
+    ]
+  },
+  "uuid2uuids": {
+    "1baf0fc9-befa-459c-8bdd-af1a450a0319": [
+      "d3c7820c-2a98-4429-8bc7-b8453bc9ac41"
+    ],
+    "d1346436-ac96-4271-b863-1f4fdead95b0": [
+      "ea7478b0-408d-4052-b703-f0d2355e095f"
+    ],
+    "60f7195c-ec2a-45eb-ba94-8955f60e81d0": [
+      "fda095cb-831d-4601-ad94-846013963de8"
+    ],
+    "31b152ff-f689-4082-a292-3eb5a0b33014": [
+      "9d9704d8-08b4-4917-ba47-9d778bc77ac6"
+    ],
+    "a3cd009f-0ab0-420d-9278-b9fdab939bbc": [
+      "6d3bfb1f-604a-4fb3-9fd8-789862cc55e7"
+    ]
+  }
+}

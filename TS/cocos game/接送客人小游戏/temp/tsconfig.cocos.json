@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "es6",
+    "types": [
+      "./temp/declarations/cc"
+    ],
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "moduleResolution": "node"
+  }
+}

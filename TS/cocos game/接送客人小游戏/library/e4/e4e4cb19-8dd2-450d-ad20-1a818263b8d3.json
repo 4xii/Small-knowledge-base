@@ -1,0 +1,131 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "editor/light",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/light|light-vs:vert|light-fs:frag",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "hash": 2523829089,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(binding = 21) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n};\nlayout(binding = 23) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nlayout(binding = 0) uniform Constant {\n  vec4 color;\n  vec4 intensitySize;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec2 a_texCoord;\nlayout(location = 0) out vec3 v_color;\nlayout(location = 1) out vec2 v_uv;\nvec4 vert () {\n  v_color = color.rgb;\n  v_uv = a_texCoord;\n  return cc_matViewProj * cc_matWorld * vec4(a_position, 1.0);\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(binding = 0) uniform Constant {\n  vec4 color;\n  vec4 intensitySize;\n};\nlayout(binding = 23) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\nlayout(location = 0) in vec3 v_color;\nlayout(location = 1) in vec2 v_uv;\nfloat sphere(vec3 d, vec3 p) {\n  return smoothstep(1.0 - intensitySize.y, 1.0, 1.0 / length(cross(d, p)));\n}\nvec4 frag () {\n  vec2 uv = v_uv - 0.5;\n  vec3 R = normalize(vec3(1.0, uv));\n  return CCFragOutput(vec4(v_color, mix(sphere(R, vec3(5.0, 0.0, 0.0)), 1.0, dot(uv, uv) < 0.0625 ? 1.0 : 0.0)));\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nuniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n};\nuniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nuniform Constant {\n  vec4 color;\n  vec4 intensitySize;\n};\nin vec3 a_position;\nin vec2 a_texCoord;\nout vec3 v_color;\nout vec2 v_uv;\nvec4 vert () {\n  v_color = color.rgb;\n  v_uv = a_texCoord;\n  return cc_matViewProj * cc_matWorld * vec4(a_position, 1.0);\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform Constant {\n  vec4 color;\n  vec4 intensitySize;\n};\nuniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\nin vec3 v_color;\nin vec2 v_uv;\nfloat sphere(vec3 d, vec3 p) {\n  return smoothstep(1.0 - intensitySize.y, 1.0, 1.0 / length(cross(d, p)));\n}\nvec4 frag () {\n  vec2 uv = v_uv - 0.5;\n  vec3 R = normalize(vec3(1.0, uv));\n  return CCFragOutput(vec4(v_color, mix(sphere(R, vec3(5.0, 0.0, 0.0)), 1.0, dot(uv, uv) < 0.0625 ? 1.0 : 0.0)));\n}\nout vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matWorld;\nuniform highp mat4 cc_matViewProj;\nuniform vec4 color;\nattribute vec3 a_position;\nattribute vec2 a_texCoord;\nvarying vec3 v_color;\nvarying vec2 v_uv;\nvec4 vert () {\n  v_color = color.rgb;\n  v_uv = a_texCoord;\n  return cc_matViewProj * cc_matWorld * vec4(a_position, 1.0);\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform vec4 color;\nuniform vec4 intensitySize;\nuniform mediump vec4 cc_exposure;\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\nvarying vec3 v_color;\nvarying vec2 v_uv;\nfloat sphere(vec3 d, vec3 p) {\n  return smoothstep(1.0 - intensitySize.y, 1.0, 1.0 / length(cross(d, p)));\n}\nvec4 frag () {\n  vec2 uv = v_uv - 0.5;\n  vec3 R = normalize(vec3(1.0, uv));\n  return CCFragOutput(vec4(v_color, mix(sphere(R, vec3(5.0, 0.0, 0.0)), 1.0, dot(uv, uv) < 0.0625 ? 1.0 : 0.0)));\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            }
+          ],
+          "samplers": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplers": []
+        }
+      },
+      "defines": [
+        {
+          "name": "CC_USE_HDR",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "blocks": [
+        {
+          "name": "Constant",
+          "members": [
+            {
+              "name": "color",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "intensitySize",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "binding": 0
+        }
+      ],
+      "samplers": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "v_color",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "location": 0
+        },
+        {
+          "name": "v_uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "location": 1
+        }
+      ],
+      "record": null,
+      "name": "editor/light|light-vs:vert|light-fs:frag"
+    }
+  ],
+  "combinations": []
+}

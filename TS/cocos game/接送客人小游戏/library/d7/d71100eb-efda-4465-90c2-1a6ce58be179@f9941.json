@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "d71100eb-efda-4465-90c2-1a6ce58be179",
+    "name": "homeBoxAD",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 142,
+      "height": 177
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 142,
+      "height": 177
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

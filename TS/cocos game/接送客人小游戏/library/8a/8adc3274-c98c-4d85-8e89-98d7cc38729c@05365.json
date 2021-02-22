@@ -1,0 +1,41 @@
+{
+  "__type__": "cc.Material",
+  "_name": "sign",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_ALBEDO_MAP": true
+    }
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      },
+      "depthStencilState": {}
+    }
+  ],
+  "_props": [
+    {
+      "albedoMap": {
+        "__uuid__": "8adc3274-c98c-4d85-8e89-98d7cc38729c@87310"
+      },
+      "albedoScale": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "metallic": 0.400000005960464,
+      "roughness": 0.70710676908493
+    }
+  ]
+}

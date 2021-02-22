@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>  
+  <div></div>
+  <script>
+    //高阶函数- 函数可以作为参数传递
+    function fn(a,b,callback){
+      console.log(a + b);
+      callback&&callback();
+    }
+    fn(1,2,function(){
+      console.log('我是最后调用的');
+    });
+  </script>
+</body>
+</html>

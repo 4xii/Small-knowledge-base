@@ -1,0 +1,167 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "pipeline/planar-shadow",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "phase": "planarShadow",
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "pipeline/planar-shadow|planar-shadow-vs:vert|planar-shadow-fs:frag",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false,
+            "stencilTestFront": true,
+            "stencilFuncFront": 5,
+            "stencilPassOpFront": 2,
+            "stencilRefBack": 128,
+            "stencilRefFront": 128,
+            "stencilReadMaskBack": 128,
+            "stencilReadMaskFront": 128,
+            "stencilWriteMaskBack": 128,
+            "stencilWriteMaskFront": 128
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "hash": 1086841741,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nlayout(binding = 23) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\n#if USE_BATCHING\n  layout(location = 1) in float a_dyn_batch_id;\n  layout(binding = 21) uniform CCLocalBatched {\n    highp mat4 cc_matWorlds[10];\n  };\n#else\nlayout(binding = 21) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n};\n#endif\nlayout(binding = 22) uniform CCShadow {\n  highp mat4 cc_matLightPlaneProj;\n  lowp vec4 cc_shadowColor;\n};\nlayout(location = 0) in vec3 a_position;\n#if USE_SKINNING\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nlayout(location = 2) in vec4 a_weights;\nlayout(location = 3) in vec4 a_joints;\nlayout(binding = 18) uniform CCSkinningTexture {\n  highp vec4 cc_jointsTextureInfo;\n};\nlayout(binding = 19) uniform CCSkinningAnimation {\n  highp vec4 cc_jointsAnimInfo;\n};\nlayout(binding = 25) uniform sampler2D cc_jointsTexture;\n#if USE_SKINNING == 1\n  highp float decode32 (highp vec4 rgba) {\n    rgba = rgba * 255.0;\n    highp float Sign = 1.0 - step(128.0, rgba[3]) * 2.0;\n    highp float Exponent = 2.0 * mod(rgba[3], 128.0) + step(128.0, rgba[2]) - 127.0;\n    highp float Mantissa = mod(rgba[2], 128.0) * 65536.0 + rgba[1] * 256.0 + rgba[0] + 8388608.0;\n    return Sign * exp2(Exponent - 23.0) * Mantissa;\n  }\n#endif\n#if USE_SKINNING == 1\n  mat4 getJointMatrix (float i) {\n    highp float j = 12.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 3.5) * invSize, y)))\n    );\n    vec4 v2 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 4.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 5.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 6.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 7.5) * invSize, y)))\n    );\n    vec4 v3 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 8.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 9.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 10.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 11.5) * invSize, y)))\n    );\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#elif USE_SKINNING == 2\n  mat4 getJointMatrix (float i) {\n    highp float j = 3.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y));\n    vec4 v2 = texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y));\n    vec4 v3 = texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y));\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#endif\nmat4 skinMatrix () {\n  return getJointMatrix(a_joints.x) * a_weights.x\n    + getJointMatrix(a_joints.y) * a_weights.y;\n    + getJointMatrix(a_joints.z) * a_weights.z;\n    + getJointMatrix(a_joints.w) * a_weights.w;\n}\nvoid CCSkin (inout vec4 position) {\n  mat4 m = skinMatrix();\n  position = m * position;\n}\nvoid CCSkin (inout StandardVertInput attr) {\n  mat4 m = skinMatrix();\n  attr.position = m * attr.position;\n  attr.normal = (m * vec4(attr.normal, 0.0)).xyz;\n  attr.tangent.xyz = (m * vec4(attr.tangent.xyz, 0.0)).xyz;\n}\n#endif\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  #if USE_SKINNING\n    CCSkin(position);\n  #endif\n  mat4 matWorld;\n  #if USE_BATCHING\n    matWorld = cc_matWorlds[int(a_dyn_batch_id + 0.5)];\n  #else\n    matWorld = cc_matWorld;\n  #endif\n  position = cc_matProj * (cc_matView * cc_matLightPlaneProj * matWorld) * position;\n  position.z -= 0.0001;\n  return position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(binding = 22) uniform CCShadow {\n  highp mat4 cc_matLightPlaneProj;\n  lowp vec4 cc_shadowColor;\n};\nlayout(binding = 23) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\nvec4 frag () {\n  return CCFragOutput(cc_shadowColor);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nuniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\n#if USE_BATCHING\n  in float a_dyn_batch_id;\n  uniform CCLocalBatched {\n    highp mat4 cc_matWorlds[10];\n  };\n#else\nuniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n};\n#endif\nuniform CCShadow {\n  highp mat4 cc_matLightPlaneProj;\n  lowp vec4 cc_shadowColor;\n};\nin vec3 a_position;\n#if USE_SKINNING\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nin vec4 a_weights;\nin vec4 a_joints;\nuniform CCSkinningTexture {\n  highp vec4 cc_jointsTextureInfo;\n};\nuniform CCSkinningAnimation {\n  highp vec4 cc_jointsAnimInfo;\n};\nuniform sampler2D cc_jointsTexture;\n#if USE_SKINNING == 1\n  highp float decode32 (highp vec4 rgba) {\n    rgba = rgba * 255.0;\n    highp float Sign = 1.0 - step(128.0, rgba[3]) * 2.0;\n    highp float Exponent = 2.0 * mod(rgba[3], 128.0) + step(128.0, rgba[2]) - 127.0;\n    highp float Mantissa = mod(rgba[2], 128.0) * 65536.0 + rgba[1] * 256.0 + rgba[0] + 8388608.0;\n    return Sign * exp2(Exponent - 23.0) * Mantissa;\n  }\n#endif\n#if USE_SKINNING == 1\n  mat4 getJointMatrix (float i) {\n    highp float j = 12.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 3.5) * invSize, y)))\n    );\n    vec4 v2 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 4.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 5.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 6.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 7.5) * invSize, y)))\n    );\n    vec4 v3 = vec4(\n      decode32(texture(cc_jointsTexture, vec2((x + 8.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 9.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 10.5) * invSize, y))),\n      decode32(texture(cc_jointsTexture, vec2((x + 11.5) * invSize, y)))\n    );\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#elif USE_SKINNING == 2\n  mat4 getJointMatrix (float i) {\n    highp float j = 3.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = texture(cc_jointsTexture, vec2((x + 0.5) * invSize, y));\n    vec4 v2 = texture(cc_jointsTexture, vec2((x + 1.5) * invSize, y));\n    vec4 v3 = texture(cc_jointsTexture, vec2((x + 2.5) * invSize, y));\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#endif\nmat4 skinMatrix () {\n  return getJointMatrix(a_joints.x) * a_weights.x\n    + getJointMatrix(a_joints.y) * a_weights.y;\n    + getJointMatrix(a_joints.z) * a_weights.z;\n    + getJointMatrix(a_joints.w) * a_weights.w;\n}\nvoid CCSkin (inout vec4 position) {\n  mat4 m = skinMatrix();\n  position = m * position;\n}\nvoid CCSkin (inout StandardVertInput attr) {\n  mat4 m = skinMatrix();\n  attr.position = m * attr.position;\n  attr.normal = (m * vec4(attr.normal, 0.0)).xyz;\n  attr.tangent.xyz = (m * vec4(attr.tangent.xyz, 0.0)).xyz;\n}\n#endif\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  #if USE_SKINNING\n    CCSkin(position);\n  #endif\n  mat4 matWorld;\n  #if USE_BATCHING\n    matWorld = cc_matWorlds[int(a_dyn_batch_id + 0.5)];\n  #else\n    matWorld = cc_matWorld;\n  #endif\n  position = cc_matProj * (cc_matView * cc_matLightPlaneProj * matWorld) * position;\n  position.z -= 0.0001;\n  return position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform CCShadow {\n  highp mat4 cc_matLightPlaneProj;\n  lowp vec4 cc_shadowColor;\n};\nuniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_nativeSize;\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n};\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\nvec4 frag () {\n  return CCFragOutput(cc_shadowColor);\n}\nout vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nuniform highp mat4 cc_matView;\nuniform highp mat4 cc_matProj;\n#if USE_BATCHING\n  attribute float a_dyn_batch_id;\n  uniform highp mat4 cc_matWorlds[10];\n#else\nuniform highp mat4 cc_matWorld;\n#endif\nuniform highp mat4 cc_matLightPlaneProj;\nattribute vec3 a_position;\n#if USE_SKINNING\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nattribute vec4 a_weights;\nattribute vec4 a_joints;\nuniform highp vec4 cc_jointsTextureInfo;\nuniform highp vec4 cc_jointsAnimInfo;\nuniform sampler2D cc_jointsTexture;\n#if USE_SKINNING == 1\n  highp float decode32 (highp vec4 rgba) {\n    rgba = rgba * 255.0;\n    highp float Sign = 1.0 - step(128.0, rgba[3]) * 2.0;\n    highp float Exponent = 2.0 * mod(rgba[3], 128.0) + step(128.0, rgba[2]) - 127.0;\n    highp float Mantissa = mod(rgba[2], 128.0) * 65536.0 + rgba[1] * 256.0 + rgba[0] + 8388608.0;\n    return Sign * exp2(Exponent - 23.0) * Mantissa;\n  }\n#endif\n#if USE_SKINNING == 1\n  mat4 getJointMatrix (float i) {\n    highp float j = 12.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = vec4(\n      decode32(texture2D(cc_jointsTexture, vec2((x + 0.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 1.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 2.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 3.5) * invSize, y)))\n    );\n    vec4 v2 = vec4(\n      decode32(texture2D(cc_jointsTexture, vec2((x + 4.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 5.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 6.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 7.5) * invSize, y)))\n    );\n    vec4 v3 = vec4(\n      decode32(texture2D(cc_jointsTexture, vec2((x + 8.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 9.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 10.5) * invSize, y))),\n      decode32(texture2D(cc_jointsTexture, vec2((x + 11.5) * invSize, y)))\n    );\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#elif USE_SKINNING == 2\n  mat4 getJointMatrix (float i) {\n    highp float j = 3.0 * (cc_jointsAnimInfo.x * i + cc_jointsAnimInfo.y) + cc_jointsTextureInfo.z;\n    highp float invSize = cc_jointsTextureInfo.y;\n    highp float y = floor(j * invSize);\n    highp float x = j - y * cc_jointsTextureInfo.x;\n    y = (y + 0.5) * invSize;\n    vec4 v1 = texture2D(cc_jointsTexture, vec2((x + 0.5) * invSize, y));\n    vec4 v2 = texture2D(cc_jointsTexture, vec2((x + 1.5) * invSize, y));\n    vec4 v3 = texture2D(cc_jointsTexture, vec2((x + 2.5) * invSize, y));\n    return mat4(vec4(v1.xyz, 0.0), vec4(v2.xyz, 0.0), vec4(v3.xyz, 0.0), vec4(v1.w, v2.w, v3.w, 1.0));\n  }\n#endif\nmat4 skinMatrix () {\n  return getJointMatrix(a_joints.x) * a_weights.x\n    + getJointMatrix(a_joints.y) * a_weights.y;\n    + getJointMatrix(a_joints.z) * a_weights.z;\n    + getJointMatrix(a_joints.w) * a_weights.w;\n}\nvoid CCSkin (inout vec4 position) {\n  mat4 m = skinMatrix();\n  position = m * position;\n}\nvoid CCSkin (inout StandardVertInput attr) {\n  mat4 m = skinMatrix();\n  attr.position = m * attr.position;\n  attr.normal = (m * vec4(attr.normal, 0.0)).xyz;\n  attr.tangent.xyz = (m * vec4(attr.tangent.xyz, 0.0)).xyz;\n}\n#endif\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  #if USE_SKINNING\n    CCSkin(position);\n  #endif\n  mat4 matWorld;\n  #if USE_BATCHING\n    matWorld = cc_matWorlds[int(a_dyn_batch_id + 0.5)];\n  #else\n    matWorld = cc_matWorld;\n  #endif\n  position = cc_matProj * (cc_matView * cc_matLightPlaneProj * matWorld) * position;\n  position.z -= 0.0001;\n  return position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform lowp vec4 cc_shadowColor;\nuniform mediump vec4 cc_exposure;\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = mix(color.rgb, SRGBToLinear(color.rgb) * cc_exposure.w, vec3(cc_exposure.z));\n\t#endif\n\treturn color;\n}\nvec4 frag () {\n  return CCFragOutput(cc_shadowColor);\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCShadow",
+              "defines": []
+            }
+          ],
+          "samplers": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocalBatched",
+              "defines": [
+                "USE_BATCHING"
+              ]
+            },
+            {
+              "name": "CCLocal",
+              "defines": []
+            },
+            {
+              "name": "CCSkinningTexture",
+              "defines": [
+                "USE_SKINNING"
+              ]
+            },
+            {
+              "name": "CCSkinningAnimation",
+              "defines": [
+                "USE_SKINNING"
+              ]
+            }
+          ],
+          "samplers": [
+            {
+              "name": "cc_jointsTexture",
+              "defines": [
+                "USE_SKINNING"
+              ]
+            }
+          ]
+        }
+      },
+      "defines": [
+        {
+          "name": "USE_BATCHING",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_SKINNING",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_HDR",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "blocks": [],
+      "samplers": [],
+      "attributes": [
+        {
+          "tags": [
+            "USE_BATCHING"
+          ],
+          "name": "a_dyn_batch_id",
+          "type": 13,
+          "count": 1,
+          "defines": [
+            "USE_BATCHING"
+          ],
+          "location": 1
+        },
+        {
+          "name": "a_position",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "location": 0
+        },
+        {
+          "name": "a_weights",
+          "type": 16,
+          "count": 1,
+          "defines": [
+            "USE_SKINNING"
+          ],
+          "location": 2
+        },
+        {
+          "name": "a_joints",
+          "type": 16,
+          "count": 1,
+          "defines": [
+            "USE_SKINNING"
+          ],
+          "location": 3
+        }
+      ],
+      "varyings": [],
+      "record": null,
+      "name": "pipeline/planar-shadow|planar-shadow-vs:vert|planar-shadow-fs:frag"
+    }
+  ],
+  "combinations": []
+}

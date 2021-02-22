@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    'use strict';
+    //1.我们的变量名必须先声明再使用
+    //num = 10;
+    //console.log(num);
+    var num = 10;
+    console.log(num);
+
+    //2.我们不能随意删除已经声明好的变量
+    //delete num;
+
+    //3.严格模式下全局作用域钟的this是undefined
+    /* function fn(){
+      console.log(this);//undefined
+    }
+    fn(); */
+
+    //4.严格模式下，如果 构造函数不加new调用，this指向的是undefined 如果给他赋值则会报错
+    /* function Star(){
+      this.sex = '男';
+    }
+    //Star();
+    var zsx = new Star();
+    console.log(zsx.sex); */
+
+    //5.定时器this还是指向window
+    /* setTimeout(function(){
+      console.log(this);
+    },2000) */
+
+    //6.严格模式下函数里面的参数不允许有重名
+    /* function fn(a,a){
+      console.log(a + a);
+    };
+    fn(1,2); */
+
+
+
+  </script>
+</body>
+</html>

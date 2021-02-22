@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //filter 筛选数组
+  //filter() 方法创建一个数组，新数组中的元素是通过检查指定数组中符合条件的所有元素，主要用于筛选数组 
+  //注意它直接返回一个数组
+  var arr = [12,66,3,7,4,88];
+  var newArr = arr.filter(function(value,index){
+    //return value >= 20;
+    return value%2 === 0;
+  });
+  console.log(newArr);
+</script>
+</body>
+</html>

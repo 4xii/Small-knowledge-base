@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1.利用new Object() 创建对象
+
+    var obj1 = new Object();
+
+    //2.利用 对象字面量创建对象
+
+    var obj2 = {};
+
+    //3.利用构造函数创建对象
+    function Star(uname,age) {
+      this.uname = uname;
+      this.age = age;
+      this.sing = function(){
+        console.log(this.uname + '会唱歌')
+      }
+    }
+
+    var ldh = new Star('刘德华',18);
+    var zsx = new Star('4xi',20);
+    console.log(ldh);
+    zsx.sing();
+
+  </script>
+</body>
+</html>

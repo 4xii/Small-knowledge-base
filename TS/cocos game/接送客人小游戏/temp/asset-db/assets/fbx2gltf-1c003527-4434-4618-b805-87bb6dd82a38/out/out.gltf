@@ -1,0 +1,218 @@
+{
+    "asset": {
+        "generator": "FBX2glTF v0.9.7",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 6592,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 768,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1248,
+            "byteOffset": 768,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1248,
+            "byteOffset": 2016,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1664,
+            "byteOffset": 3264,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 832,
+            "byteOffset": 4928,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 832,
+            "byteOffset": 5760,
+            "target": 34962
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 384,
+            "bufferView": 0,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 104,
+            "bufferView": 1,
+            "byteOffset": 0,
+            "min": [
+                -1.8836783056031e-05,
+                -2.60922606685199e-05,
+                -1.66229779097193e-06
+            ],
+            "max": [
+                1.95515622181119e-05,
+                2.65651706286008e-05,
+                1.89841775863897e-05
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 104,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 104,
+            "bufferView": 3,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 104,
+            "bufferView": 4,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 104,
+            "bufferView": 5,
+            "byteOffset": 0
+        }
+    ],
+    "images": [
+        {
+            "name": "stone01.png",
+            "uri": "stone01.png"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "name": "stone01",
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "materials": [
+        {
+            "name": "stone01",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.70710676908493
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "TS_FaGuangSuiPian_01",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "COLOR_0": 3,
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 4,
+                        "TEXCOORD_1": 5
+                    },
+                    "indices": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "TS_FaGuangSuiPian_01",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                -0.70710676908493,
+                -0.0,
+                0.0,
+                0.70710676908493
+            ],
+            "scale": [
+                3419.53955078125,
+                3419.53955078125,
+                3419.53955078125
+            ],
+            "mesh": 0
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //构造函数中的属性和方法，我们称之为成员，成员可以添加
+    function Star(uname,age){
+      this.uname = uname;
+      this.age = age;
+      this.sing = function(){
+        console.log(this.uname + '会说唱');
+      }
+    }
+    var zsx = new Star('4xi',20);
+    //实例成员就是构造函数内部通过this添加的成员 uname age sing 就是实例成员
+    //实例成员只能通过实例化的对象来访问
+    console.log(zsx.uname);
+    zsx.sing();
+    //console.log(Star.uname); //不可以通过构造函数来访问实例成员
+    //2.静态成员 在构造函数本身上添加的成员 sex就是静态成员
+    Star.sex = '男';
+    //静态成员只能通过构造函数来访问
+    console.log(Star.sex);
+    console.log(zsx.sex);//不能通过对象来访问
+  </script>
+</body>
+</html>

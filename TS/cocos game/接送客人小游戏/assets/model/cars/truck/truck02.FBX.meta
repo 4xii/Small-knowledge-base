@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.16",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1",
+  "files": [],
+  "subMetas": {
+    "5d0b5": {
+      "ver": "1.0.8",
+      "importer": "gltf-mesh",
+      "uuid": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@5d0b5",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "5d0b5",
+      "name": "car_005_0.mesh"
+    },
+    "203a2": {
+      "ver": "1.0.2",
+      "importer": "gltf-embeded-image",
+      "uuid": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@203a2",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "203a2",
+      "name": "truck02Blue.jpg.image"
+    },
+    "3a1cd": {
+      "ver": "1.0.19",
+      "importer": "texture",
+      "uuid": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@3a1cd",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@203a2"
+      },
+      "displayName": "",
+      "id": "3a1cd",
+      "name": "truck02Blue.texture"
+    },
+    "5f218": {
+      "ver": "1.0.13",
+      "importer": "gltf-material",
+      "uuid": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@5f218",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "5f218",
+      "name": "truck02Blue.material"
+    },
+    "7a0d8": {
+      "ver": "1.0.9",
+      "importer": "gltf-scene",
+      "uuid": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@7a0d8",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "7a0d8",
+      "name": "truck02.FBX.prefab"
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "truck02Blue.jpg",
+        "uri": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@203a2"
+      }
+    ],
+    "redirect": "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@7a0d8",
+    "assetFinder": {
+      "meshes": [
+        "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@5d0b5"
+      ],
+      "skeletons": [],
+      "textures": [
+        "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@3a1cd"
+      ],
+      "materials": [
+        "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@5f218"
+      ],
+      "scenes": [
+        "b5b7ecdb-072b-4324-a4c6-d8f5ec79f1d1@7a0d8"
+      ]
+    }
+  }
+}

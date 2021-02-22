@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "bfe031a7-1536-4de2-b0af-66c4b134206b",
+    "name": "homeIconRank",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 118,
+      "height": 129
+    },
+    "offset": {
+      "x": 0,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 118,
+      "height": 130
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

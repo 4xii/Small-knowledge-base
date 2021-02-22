@@ -1,0 +1,9 @@
+{
+    "resolveMap": {
+        "../data/Constants": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/data/Constants.ts",
+        "../data/CustomEventListener": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/data/CustomEventListener.ts",
+        "../data/PoolManager": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/data/PoolManager.ts",
+        "./Car": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/game/Car.ts",
+        "./RoadPoint": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/game/RoadPoint.ts"
+    }
+}

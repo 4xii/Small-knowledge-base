@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.16",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "bdc1c2f6-9896-4810-af81-19affc044b36",
+  "files": [],
+  "subMetas": {
+    "87310": {
+      "ver": "1.0.19",
+      "importer": "texture",
+      "uuid": "bdc1c2f6-9896-4810-af81-19affc044b36@87310",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bdc1c2f6-9896-4810-af81-19affc044b36@a86d1"
+      },
+      "displayName": "",
+      "id": "87310",
+      "name": "sign.texture"
+    },
+    "b8a2d": {
+      "ver": "1.0.8",
+      "importer": "gltf-mesh",
+      "uuid": "bdc1c2f6-9896-4810-af81-19affc044b36@b8a2d",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "b8a2d",
+      "name": "Plane001.mesh"
+    },
+    "a86d1": {
+      "ver": "1.0.2",
+      "importer": "gltf-embeded-image",
+      "uuid": "bdc1c2f6-9896-4810-af81-19affc044b36@a86d1",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "a86d1",
+      "name": "sign.jpg.image"
+    },
+    "05365": {
+      "ver": "1.0.13",
+      "importer": "gltf-material",
+      "uuid": "bdc1c2f6-9896-4810-af81-19affc044b36@05365",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "05365",
+      "name": "sign.material"
+    },
+    "b48be": {
+      "ver": "1.0.9",
+      "importer": "gltf-scene",
+      "uuid": "bdc1c2f6-9896-4810-af81-19affc044b36@b48be",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      },
+      "displayName": "",
+      "id": "b48be",
+      "name": "sign01.FBX.prefab"
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "sign.jpg",
+        "uri": "bdc1c2f6-9896-4810-af81-19affc044b36@a86d1"
+      }
+    ],
+    "redirect": "bdc1c2f6-9896-4810-af81-19affc044b36@b48be",
+    "assetFinder": {
+      "meshes": [
+        "bdc1c2f6-9896-4810-af81-19affc044b36@b8a2d"
+      ],
+      "skeletons": [],
+      "textures": [
+        "bdc1c2f6-9896-4810-af81-19affc044b36@87310"
+      ],
+      "materials": [
+        "bdc1c2f6-9896-4810-af81-19affc044b36@05365"
+      ],
+      "scenes": [
+        "bdc1c2f6-9896-4810-af81-19affc044b36@b48be"
+      ]
+    }
+  }
+}

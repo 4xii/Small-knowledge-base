@@ -1,0 +1,126 @@
+{
+  "__type__": "cc.Mesh",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": ".bin",
+  "_struct": {
+    "primitives": [
+      {
+        "primitiveMode": 7,
+        "vertexBundelIndices": [
+          0
+        ],
+        "geometricInfo": {
+          "view": {
+            "offset": 8352,
+            "length": 2088,
+            "count": 522,
+            "stride": 4
+          }
+        },
+        "indexView": {
+          "offset": 10440,
+          "length": 540,
+          "count": 270,
+          "stride": 2
+        }
+      },
+      {
+        "primitiveMode": 7,
+        "vertexBundelIndices": [
+          1
+        ],
+        "geometricInfo": {
+          "view": {
+            "offset": 14004,
+            "length": 756,
+            "count": 189,
+            "stride": 4
+          }
+        },
+        "indexView": {
+          "offset": 14760,
+          "length": 162,
+          "count": 81,
+          "stride": 2
+        }
+      }
+    ],
+    "vertexBundles": [
+      {
+        "view": {
+          "offset": 0,
+          "length": 8352,
+          "count": 174,
+          "stride": 48
+        },
+        "attributes": [
+          {
+            "name": "a_position",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_normal",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord",
+            "format": 21,
+            "isNormalized": false
+          },
+          {
+            "name": "a_tangent",
+            "format": 43,
+            "isNormalized": false
+          }
+        ]
+      },
+      {
+        "view": {
+          "offset": 10980,
+          "length": 3024,
+          "count": 63,
+          "stride": 48
+        },
+        "attributes": [
+          {
+            "name": "a_position",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_normal",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord",
+            "format": 21,
+            "isNormalized": false
+          },
+          {
+            "name": "a_tangent",
+            "format": 43,
+            "isNormalized": false
+          }
+        ]
+      }
+    ],
+    "minPosition": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": -7.629394360719743e-8,
+      "z": -0.0000014853477523502079
+    },
+    "maxPosition": {
+      "__type__": "cc.Vec3",
+      "x": 1.574803113937378,
+      "y": 1.5748143196105957,
+      "z": 0.013938126154243946
+    }
+  },
+  "_dataLength": 14922,
+  "_hash": 3575499626
+}

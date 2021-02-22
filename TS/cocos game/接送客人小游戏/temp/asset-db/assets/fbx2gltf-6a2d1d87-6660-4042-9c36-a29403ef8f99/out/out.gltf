@@ -1,0 +1,295 @@
+{
+    "asset": {
+        "generator": "FBX2glTF v0.9.7",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 8288,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 540,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2088,
+            "byteOffset": 540,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2088,
+            "byteOffset": 2628,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1392,
+            "byteOffset": 4716,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 162,
+            "byteOffset": 6108,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 756,
+            "byteOffset": 6272,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 756,
+            "byteOffset": 7028,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 504,
+            "byteOffset": 7784,
+            "target": 34962
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 270,
+            "bufferView": 0,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 174,
+            "bufferView": 1,
+            "byteOffset": 0,
+            "min": [
+                0.0,
+                1.52587887214395e-07,
+                1.19209289550781e-07
+            ],
+            "max": [
+                1.5570455789566,
+                1.5748143196106,
+                0.0139381121844053
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 174,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 174,
+            "bufferView": 3,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 81,
+            "bufferView": 4,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 63,
+            "bufferView": 5,
+            "byteOffset": 0,
+            "min": [
+                0.787401497364044,
+                -7.62939436071974e-08,
+                -1.48534775235021e-06
+            ],
+            "max": [
+                1.57480311393738,
+                1.57480311393738,
+                0.0139381261542439
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 63,
+            "bufferView": 6,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 63,
+            "bufferView": 7,
+            "byteOffset": 0
+        }
+    ],
+    "images": [
+        {
+            "name": "road03.jpg",
+            "uri": "road03.jpg"
+        },
+        {
+            "name": "road01.jpg",
+            "uri": "road01.jpg"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "name": "贴图 #7",
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "name": "贴图 #4",
+            "sampler": 0,
+            "source": 1
+        }
+    ],
+    "materials": [
+        {
+            "name": "Material #90",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.70710676908493
+            }
+        },
+        {
+            "name": "Material #87",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 1,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.70710676908493
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "001",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 3
+                    },
+                    "indices": 0
+                },
+                {
+                    "material": 1,
+                    "mode": 4,
+                    "attributes": {
+                        "NORMAL": 6,
+                        "POSITION": 5,
+                        "TEXCOORD_0": 7
+                    },
+                    "indices": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "001",
+            "translation": [
+                -3.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                -0.70710676908493,
+                -0.0,
+                0.0,
+                0.70710676908493
+            ],
+            "scale": [
+                2.53999996185303,
+                2.53999996185303,
+                2.53999996185303
+            ],
+            "mesh": 0
+        }
+    ]
+}

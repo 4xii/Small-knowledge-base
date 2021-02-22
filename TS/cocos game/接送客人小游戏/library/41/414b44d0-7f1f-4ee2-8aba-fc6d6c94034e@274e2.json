@@ -1,0 +1,96 @@
+{
+  "__type__": "cc.Mesh",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": ".bin",
+  "_struct": {
+    "primitives": [
+      {
+        "primitiveMode": 7,
+        "vertexBundelIndices": [
+          0
+        ],
+        "geometricInfo": {
+          "view": {
+            "offset": 74784,
+            "length": 9348,
+            "count": 2337,
+            "stride": 4
+          }
+        },
+        "indexView": {
+          "offset": 84132,
+          "length": 6288,
+          "count": 3144,
+          "stride": 2
+        }
+      }
+    ],
+    "vertexBundles": [
+      {
+        "view": {
+          "offset": 0,
+          "length": 74784,
+          "count": 779,
+          "stride": 96
+        },
+        "attributes": [
+          {
+            "name": "a_position",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_normal",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord",
+            "format": 21,
+            "isNormalized": false
+          },
+          {
+            "name": "a_tangent",
+            "format": 43,
+            "isNormalized": false
+          },
+          {
+            "name": "a_joints",
+            "format": 41,
+            "isNormalized": false
+          },
+          {
+            "name": "a_weights",
+            "format": 43,
+            "isNormalized": false
+          },
+          {
+            "name": "a_color",
+            "format": 43,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord1",
+            "format": 21,
+            "isNormalized": false
+          }
+        ]
+      }
+    ],
+    "minPosition": {
+      "__type__": "cc.Vec3",
+      "x": -0.14122292523378965,
+      "y": 0.015606855035390055,
+      "z": -0.15158418339964205
+    },
+    "maxPosition": {
+      "__type__": "cc.Vec3",
+      "x": 0.14122300263485205,
+      "y": 0.40242180220171847,
+      "z": 0.10906840646569745
+    }
+  },
+  "_dataLength": 90420,
+  "_hash": 3132419366
+}

@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "image": "9dba8f4a-4f4c-4a6d-b103-cdf2cae17971",
+    "name": "homeIconLottery",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 118,
+      "height": 129
+    },
+    "offset": {
+      "x": 0,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 118,
+      "height": 130
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

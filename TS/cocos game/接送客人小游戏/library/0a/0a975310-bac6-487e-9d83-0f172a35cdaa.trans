@@ -1,0 +1,5 @@
+{
+    "resolveMap": {
+        "./GameMap": "D:/读书/前端/JS高级与Ts/TS/cocos game/接送客人小游戏/assets/script/game/GameMap.ts"
+    }
+}

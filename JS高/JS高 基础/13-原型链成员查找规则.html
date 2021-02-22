@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Star(uname,age){
+      this.uname = uname;
+      this.age = age;
+    }
+    Star.prototype.sing = function(){
+      console.log('我会唱歌');
+    }
+    //Star.prototype.sex = '男';
+    //Object.prototype.sex = '男';
+    var zsx = new Star('4xi',20);
+    //zsx.sex = '男';
+    console.log(zsx.sex);
+    console.log(Object.prototype);
+    console.log(zsx);
+    console.log(Star.prototype);
+    console.log(zsx.toString());
+
+  </script>
+</body>
+</html>
