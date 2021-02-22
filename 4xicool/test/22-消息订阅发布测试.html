@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../22-PubSub.js"></script>
+</head>
+<body>
+  <script>
+    //订阅一个频道
+    let pid = PubSub.subscribe('pay',data => {
+      console.log('商家接到订单，开始制作',data);
+    })
+
+    let pid2 = PubSub.subscribe('pay',data => {
+      console.log('骑手接到订单，去取餐',data);
+    })
+
+    //发布消息
+    // PubSub.publish('pay',{
+    //   title:'鱼香肉丝',
+    //   price:20,
+    //   pos:'深圳'
+    // })
+
+    //取消订阅
+    PubSub.unsubscribe('token_2')
+    console.log(PubSub);
+    PubSub.publish('pay',{
+      title:'鱼香肉丝',
+      price:20,
+      pos:'深圳'
+    })
+  </script>
+</body>
+</html>

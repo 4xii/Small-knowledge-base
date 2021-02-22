@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="../20-eventListener.js"></script>
   <style>
-    #outter{
+    /* #outter{
       width: 200px;
       height:200px;
       background-color:#89c;
@@ -18,27 +19,74 @@
       position:relative;
       left:50px;
       top:50px;
-    }
+    } */
   </style>
 </head>
 <body>
-  <div id="outter">
-    <div id="inner">
 
-    </div>
-  </div>
+  <ul id="items">
+    <li>AAAA</li>
+    <li>BBBB</li>
+    <li>CCCC</li>
+    <li>DDDD</li>
+  </ul>
   <script>
-    //获取元素
-    let outter = document.querySelector('#outter')
-    let inner = document.querySelector('#inner')
+    //调用函数绑定事件
+    addEventListener('#items','click',function(e){
+      //输出标签文本
+      console.log(this.innerHTML);
+    },'li')
+  </script>
 
-    outter.addEventListener('click',function(){
-      console.log('捕获outter');
-    },true)
 
-    inner.addEventListener('click',function(){
-      console.log('捕获inner');
-    },true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div id="outter">
+    <div id="inner">
+    </div>
+  </div> -->
+  <script>
+    // //获取元素
+    // let outter = document.querySelector('#outter')
+    // let inner = document.querySelector('#inner')
+
+    // outter.addEventListener('click',function(){
+    //   console.log('捕获outter');
+    // },true)
+
+    // inner.addEventListener('click',function(){
+    //   console.log('捕获inner');
+    // },true)
+
+    // outter.addEventListener('click',function(){
+    //   console.log('冒泡outter');
+    // })
+
+    // inner.addEventListener('click',function(){
+    //   console.log('冒泡inner');
+    // })
   </script>
 </body>
 </html>

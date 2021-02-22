@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../23-axios.js"></script>
+</head>
+<body>
+  <script>
+    //函数
+    axios({
+      //请求的类型
+      method:'POST',
+      //请求的url
+      url:'https://api.apiopen.top/getJoke',
+      //url参数
+      params:{
+        a:100,
+        b:200
+      },
+      //请求体
+      data:{
+        c:300,
+        d:400
+      }
+    }).then(response => {
+      console.log(response);
+    }).catch(reason => {
+      console.log(reason);
+    })
+  </script>
+</body>
+</html>

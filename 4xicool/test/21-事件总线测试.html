@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../21-eventBus.js"></script>
+</head>
+<body>
+  <script>
+    //eventBus
+    eventBus.on('login',data => {
+       console.log(data + '用户已登录');
+    })
+
+    eventBus.on('login',data => {
+       console.log(data + '登录数据已写入');
+    })
+
+    eventBus.on('loginout',data => {
+       console.log(data + '退出登录');
+    })
+   //触发
+    setTimeout(()=>{
+      eventBus.emit('login','张三')
+    },2000)
+
+    //解绑事件
+    eventBus.off('loginout');
+
+    console.log(eventBus);
+  </script>
+</body>
+</html>
