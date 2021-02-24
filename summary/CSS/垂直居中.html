@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body{
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+    .box{
+      box-sizing: border-box;
+      width: 100px;
+      height: 50px;
+      line-height: 48px;
+      text-align: center;
+      font-size: 16px;
+      border:1px solid lightblue;
+      background: lightblue;
+    }
+    /* 定位1 需要知道具体宽高*/
+    /* body{
+      position: relative;
+    } */
+    /* .box{
+      position:absolute;
+      top:50%;
+      left:50%;
+      margin-top: -25px;
+      margin-left: -50px;
+    } */
+
+    /* 需要有宽高，否则会被拉长100% */
+    /* .box{
+      position:absolute;
+      top:0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      margin:auto
+    } */
+
+    /* 兼容性不是很好*/
+    /* .box{
+      position:absolute;
+      top: 50%;
+      left:50%;
+      transform:translate(-50%,-50%)
+    } */
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+    /* 
+      box-sizing:content-box 标准盒模型
+      box-sizing:border-box  怪异盒模型IE盒模型
+    */
+  </style>
+</head>
+<body>
+  
+  <div class="box">4xi盒</div>
+  <!-- JS -->
+  <script>
+    
+  </script>
+</body>
+</html>
