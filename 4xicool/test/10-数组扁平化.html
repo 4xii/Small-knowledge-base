@@ -1,3 +1,10 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-02-19 15:08:21
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-03-08 21:51:51
+ * @Description:  
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +20,13 @@
     //数组扁平化
     //console.log(flatten1(arr));
     //some已经concat
+
+    //es6中 flat可以处理数组扁平化
+    //arr = arr.flat(Infinity);
+
+    //转换为字符串再转回来
+    //arr = arr.toString().split(',').map(item => parseFloat(item));
+    //arr = JSON.stringify(arr).replace(/(\[|\])/g,'').split(',').map(item => parseFloat(item))
     console.log(flatten2(arr));
   </script>
 </body>

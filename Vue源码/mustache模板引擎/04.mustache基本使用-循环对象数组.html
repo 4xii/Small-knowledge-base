@@ -1,3 +1,10 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-02-11 14:07:02
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-02-26 01:23:27
+ * @Description: 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +15,7 @@
 <body>
   <script src="jslib/mustache.js"></script>
   <div id="container"></div>
-  <script type="text/template" id="mytemplate">
+  <script type="text/template" id = mytemplate>
     <ul>
       {{#arr}}
           <li>
@@ -21,10 +28,10 @@
           </li>
       {{/arr}}
     </ul>
+
   </script>
   <script>
     var templateStr = document.getElementById('mytemplate').innerHTML;
-
     var data = {
         arr: [
           { "name": "小明", "age": 12, "sex": "男" },

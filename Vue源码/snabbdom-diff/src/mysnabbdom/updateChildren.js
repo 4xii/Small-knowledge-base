@@ -60,7 +60,7 @@ export default function updateChildren(parentElm,oldCh,newCh){
     } else if(checkSameVnode(oldEndVnode,newStartVnode)){
       console.log('新前旧后')//新后和旧前
       patchVnode(oldEndVnode,newStartVnode);
-      //当新后旧前命中，移动节点，移动新前指向的这个节点到老节点的旧后的后面
+      //当新后旧前命中，移动节点，移动新前指向的这个节点到老节点的旧前的前面
       parentElm.insertBefore(oldEndVnode.elm,oldStartVnode.elm);
       oldEndVnode = oldCh[--oldEndIdx];
       newStartVnode = newCh[++newStartIdx];
@@ -100,7 +100,6 @@ export default function updateChildren(parentElm,oldCh,newCh){
   if(newStartIdx <= newEndIdx){
     console.log('new还有剩余节点没处理，要加项,要把所有剩余的节点都插入到oldStartIdx之前');
     //遍历新的newCh，添加到老的没有处理之前
-    
 
     for(let i = newStartIdx;i<=newEndIdx;i++){
       //insertBefore方法可以自动识别null，如果是null就会自动排到队尾去。和appendChild是一致了
