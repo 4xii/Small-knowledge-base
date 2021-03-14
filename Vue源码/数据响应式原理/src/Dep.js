@@ -1,3 +1,10 @@
+/*
+ * Author: 朱世新
+ * Date: 2021-02-10 21:47:36
+ * LastEditors: 朱世新
+ * LastEditTime: 2021-03-10 09:32:54
+ * Description: 
+*/
 var uid = 0;
 export default class Dep{
   constructor(){
@@ -7,7 +14,7 @@ export default class Dep{
     //用数组存储自己的订阅者。subs是subscribes订阅者的意思
     //这是数组里面放的是Watcher的实例
     this.subs = [];
-  }
+  } 
   //添加订阅
   addSub(sub){
     this.subs.push(sub)
