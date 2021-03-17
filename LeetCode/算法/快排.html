@@ -1,0 +1,46 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-03-17 09:57:05
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-03-17 10:09:11
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 
+      arr = [31,23,34,2,13,234]取31   
+      23，2，13，  31   ，34，234 左边取23右边去34
+      2 23 13   31     34   234
+    */
+    let arr = [31,23,34,2,13,234]
+    function quickSort(arr){
+      //1.找基准数,小的放左边，大的放在右边
+      let base_num = arr[0];
+      let left_arr = [];
+      let right_arr = [];
+      for (let i = 1; i < arr.length; i++) {
+        if(arr[i] <base_num){
+          left_arr.push(arr[i])
+        }else{
+          right_arr.push(arr[i])
+        }
+      }
+      
+      //2.对左右数组分别进行快排（条件：数组中的元素要大于等于两个）
+      if(left_arr.length >= 2)left_arr =  quickSort(left_arr);
+      if(right_arr.length >= 2)right_arr =  quickSort(right_arr);
+      //3.合并排序好的左数组，基准数，右数组
+      return left_arr.concat(base_num,right_arr)
+    }
+    let ans = quickSort(arr);
+    console.log(ans);
+  </script>
+</body>
+</html>

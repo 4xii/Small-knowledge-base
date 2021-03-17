@@ -1,0 +1,74 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-03-16 18:08:32
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-03-17 09:19:35
+ * @Description: 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		span {
+			display: block;
+			margin: 20px auto;
+			width: 0;
+			height: 0;
+			border: 20px solid transparent;
+			border-left-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<span></span>
+	<script>
+		let arr1 = [1, 2, 3, 22, 33, 22]
+
+		function unique(arr) {
+			return [...new Set(arr)]
+		}
+		console.log(unique(arr1));
+
+		function all(promises) {
+
+			return promise((resolve, reject) => {
+
+				let arr = []
+				let index = 0;
+				for (let i = 0; i < promises.length; i++) {
+
+					promises[i].then(v => {
+						index++;
+						arr[i] = v;
+						if (index == promises.length) {
+							resolve(arr)
+						}
+					}, r => {
+						reject(r)
+					})
+				}
+			})
+		}
+		function race(promises) {
+			return promise((resolve, reject) => {
+				for(let i = 0;i<promises.length;i++){
+					promises[i].then(v=>{
+						return resolve(v)
+					},r=>{
+						return reject(r)
+					})	
+				}
+			})
+		}
+	</script>
+</body>
