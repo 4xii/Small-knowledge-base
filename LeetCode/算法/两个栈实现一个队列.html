@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* 
+			两个栈实现一个队列
+			1.栈1里面的元素放到栈2
+			2.栈2出栈
+			3.栈2的数据挪到栈1里面
+		*/
+		let stack1 = [];//入队操作
+		let stack2 = [];//出队操作
+
+		//队列的入队操作
+		function push(node){
+			//往栈1push元素
+			stack1.push(node)
+		}
+		//队列的出队操作
+		function pop(){
+			//1.把栈1里面的元素挪到栈2
+			while(stack1.length){
+				stack2.push(stack2.pop());
+			}
+			//2.把栈2顶端数据出栈
+			let popVal = stack2.pop();
+			//3.把栈2数据挪到栈1（恢复数据）
+			while(stack2.length){
+				stack1.push(stack2.pop())
+			}
+			return popVal;
+		}
+
+		/* 
+		1,2,3,4,5入队
+		出队1
+		入队6
+		出队2
+		出队3
+		*/
+	</script>
+</body>
+
+</html>

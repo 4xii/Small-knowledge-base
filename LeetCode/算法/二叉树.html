@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		//1.找到根节点(前序序列的第一个元素一定是根节点)
+		//2.根据找到的根节点和中序序列，找到的树的左子树和右子树
+		//3.做左子树和右子树进行1,2的递归操作
+		let qianXu = [1,2,4,7,3,5,6,8]
+		let zhongXu = [4,7,2,1,5,3,8,6]
+
+		//在js中创建树的节点可以用构造函数
+		function TreeNode(val){
+			this.val = val;
+			this.left = null;
+			this.right = null;
+		}
+
+		function rebuildTree(qianXu,zhongXu){
+			if(qianXu[0]){
+				//1.找到根节点(前序序列的第一个元素一定是根节点)
+				let rootVal = qianXu[0];//根节点的值
+				//2.根据找到的根节点和中序序列，找到的树的左子树和右子树
+				//根节点在中序序列中的位置
+				let index = zhongXu.indexOf(rootVal);
+				//前序序列：左子树qianXu（1,index）,右子树qianXu（index+1,最后）
+				//中序序列:左子树zhongXu(0,index-1)，右子树zhongXu（index+1,最后）
+
+				//3.做左子树和右子树进行1,2的递归操作
+				let leftTree = rebuildTree(qianXu.slice(1,index+1),zhongXu.slice(0,index))
+				let rightTree = rebuildTree(qianXu.slice(index+1),zhongXu.slice(index+1))
+
+				let root = new TreeNode(rootVal);
+				root.left = leftTree;
+				root.right = rightTree;
+				return root;
+			}
+		}
+
+		console.log(rebuildTree(qianXu,zhongXu));
+	</script>
+</body>
+
+</html>
