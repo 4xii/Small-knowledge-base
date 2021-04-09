@@ -1,0 +1,65 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-03-30 09:30:04
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-03-30 16:55:28
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    {
+      //1.初始化
+      let map = new Map();
+      //2.添加元素set(key,value)
+      map.set('name', '4xi');
+      map.set('age', 20);
+      console.log(map.size);//size 2
+      //3.获取元素get(key) 返回value
+      console.log(map.get('name'));//4xi
+      //4.删除元素delete(key)
+      //console.log(map);//Map { name → "4xi", age → 20 }
+      //map.delete('age');
+      //console.log(map);//Map { name → "4xi" }
+      //5.清楚所有clear()
+      // map.clear();
+      //6.遍历
+      console.log('----keys----');
+      for (let k of map.keys()) {
+        console.log(k);
+      }
+      console.log('----values----');
+      for (let v of map.values()) {
+        console.log(v);
+      }
+      console.log('----entries----');
+      for (let kv of map.entries()) {
+        console.log(kv);
+      }
+      console.log('----forEach----');
+      map.forEach((v, k) => {
+        console.log(k, v);
+      })
+    }{
+      //WeakMap
+      //只接受对象作为键名
+      //也没有size属性，没有遍历
+      //弱类型
+      let weakmap = new WeakMap()
+      let obj = {}
+      weakmap.set(obj,123) 
+      console.log(weakmap);
+      console.log(weakmap.get(obj));//123
+    }
+  </script>
+</body>
+
+</html>
