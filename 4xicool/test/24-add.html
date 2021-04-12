@@ -1,0 +1,46 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-04-10 11:22:40
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-04-10 11:35:09
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+  //为数字添加add方法
+  ~function (){
+    //每个方法执行完，都要返回NUMBER这个类的实例，这样才可以继续调用NUMBER类原型中的方法
+    function check(n){
+      n = Number(n);
+      return  isNaN(n) ? 0 : n;
+    }
+
+    function add(n){
+      n = check(n)
+      return this + n;
+    }
+    
+    function minus(n){
+      n = check(n)
+      return this - n;
+    }
+
+    Number.prototype.add = add;
+    Number.prototype.minus = minus;
+
+    ["add","minus"].forEach(item => {
+      Number.prototype[item] = eval(item);
+    })
+    
+  }();
+  console.log((5).add(3).minus(2));
+</script>
+</html>
