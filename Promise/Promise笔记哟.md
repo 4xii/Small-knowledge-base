@@ -65,3 +65,43 @@
 ## 7.Promise.race方法(promise)=>{}
 * promise：包含n个promise数组
 说明：返回一个新的promise，第一个完成的promise的结果状态就是最终的结果状态
+
+# Promise
+异步程序
+```js
+var data = $.ajax({
+  url:'xxx',
+  async:false//同步
+})
+console.log(data.responseJSON)
+console.log('wassup')
+function getNames(data){
+  return data.map(function(item){
+    return item.name
+  })
+}
+```
+
+* Promise的存在是异步问题同步化解决方案
+```js
+const p = new Promise((resolve,reject)=>{
+  var data = $.ajax({
+    url:'xxx',
+    success(data){
+      resolve(data)
+    }
+  })
+})
+
+//同步？ 异步，不能去阻塞下面的程序
+p.then(res)=>{
+  console.log(getNames(res))
+}
+
+console.log('wassup')
+function getNames(data){
+  return data.map(function(item){
+    return item.name
+  })
+}
+```

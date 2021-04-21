@@ -1,0 +1,68 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-04-17 11:47:19
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-04-17 13:59:14
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let data = [
+      { id: 1, address: '安徽', pid: 0 },
+      { id: 2, address: '江苏', pid: 0 },
+      { id: 3, address: '合肥', pid: 1 },
+      { id: 4, address: '庐阳区', pid: 3 },
+      { id: 5, address: '大杨镇', pid: 4 },
+      { id: 6, address: '南京', pid: 2 },
+      { id: 7, address: '玄武区', pid: 6 },
+      { id: 8, address: '梅园新村街道', pid: 7 },
+      { id: 9, address: '上海', pid: 0 },
+      { id: 10, address: '黄浦区', pid: 9 },
+      { id: 11, address: '外滩', pid: 10 },
+      { id: 12, address: '安庆', pid: 1 },
+    ]
+    /* 
+      PID -> ID
+      顶级与子级数据分开
+        递归操作 下一级子数据分享
+    */
+    formatDataTree(data)
+
+    function formatDataTree(data) {
+      let parents = data.filter(item => item.pid === 0),
+        children = data.filter(item => item.pid !== 0)
+
+      dataToTree(parents, children)
+
+
+      function dataToTree(parents, children) {
+        parents.map(p => {
+          children.map((c,i) => {
+            if (c.pid === p.id) {
+              let _children = JSON.parse(JSON.stringify(children))
+              _children.splice(i,1);
+              dataToTree([c],_children)
+              if (p.children) {
+                p.children.push(c)
+              } else {
+                p.children = [c];
+              }
+            }
+          })
+        })
+      }
+      console.log(parents);
+    }
+  </script>
+</body>
+
+</html>

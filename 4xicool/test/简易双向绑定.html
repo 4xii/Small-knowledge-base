@@ -1,0 +1,49 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-04-19 12:29:09
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-04-19 20:52:00
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="txt">
+  <p id="show"></p>
+  <script>
+    //var obj = {}
+  // Object.defineProperty(obj, 'txt', {
+  //     get: function () {
+  //         return obj
+  //     },
+  //     set: function (newValue) {
+  //         document.getElementById('txt').value = newValue
+  //         document.getElementById('show').innerHTML = newValue
+  //     }
+  // })
+  // document.addEventListener('keyup', function (e) {
+  //     obj.txt = e.target.value
+  // })
+  var obj = {}
+  let proxy = new Proxy(obj,{
+    get(target,prop) {
+      return target[prop]
+    },
+    set(target,prop,value) {
+      document.getElementById('show').innerHTML = value
+    }
+  })
+  document.addEventListener('keyup', function (e) {
+    proxy.txt = e.target.value
+  })
+  </script>
+</body>
+
+</html>

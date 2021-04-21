@@ -1,3 +1,10 @@
+/*
+ * Author: 朱世新
+ * Date: 2021-02-10 21:47:59
+ * LastEditors: 朱世新
+ * LastEditTime: 2021-04-20 12:07:37
+ * Description: 
+*/
 import Dep from './Dep.js'
 var uid = 0;
 export default class Wathcer{

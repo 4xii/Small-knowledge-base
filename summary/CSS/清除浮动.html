@@ -1,0 +1,52 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-04-19 23:58:53
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-04-20 09:36:00
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  ul::after,
+  div::after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+
+  .box{
+    width: 200px;
+    border:10px solid #000
+  }
+  .box1{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: blueviolet;
+  }
+  /* .box::after{
+    content:"";
+    display: block;
+    clear: both;
+  } */
+
+  .box2{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: brown;
+  }
+</style>
+<body>
+  <div class="box">
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </div>
+</body>
+</html>

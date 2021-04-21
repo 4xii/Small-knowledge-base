@@ -2,7 +2,7 @@
  * Author: 朱世新
  * Date: 2021-04-12 22:06:00
  * LastEditors: 朱世新
- * LastEditTime: 2021-04-12 22:16:57
+ * LastEditTime: 2021-04-13 21:49:31
  * Description: 
 */
 var numIslands = function(grid) {
@@ -10,7 +10,7 @@ var numIslands = function(grid) {
   //dfs - 深度优先搜索
   let count = 0;
   function dfs(row,col){
-    if(row < 0 || row > grid.length || col < 0 || col > grid[0].length || grid[row][col] === "0"){
+    if(row < 0 || row >= grid.length || col < 0 || col >= grid[0].length || grid[row][col] === "0"){
       return 
     }
 
@@ -24,7 +24,7 @@ var numIslands = function(grid) {
     for (let col = 0; col < grid[row].length; col++) {
       if(grid[row][col] === "1"){
         count++;
-        sink(row,col)
+        dfs(row,col)
       }
     }
   }

@@ -1,4 +1,19 @@
+/*
+ * Author: 朱世新
+ * Date: 2021-02-19 15:08:02
+ * LastEditors: 朱世新
+ * LastEditTime: 2021-04-17 21:29:44
+ * Description: 
+*/
 //数组扁平化
+//1
+// arr = arr.flat(Infinity)
+
+//2
+//arr = arr.toString().split(",").map(item => parseFloat(item))
+
+//3
+// arr=JSON.stringify(arr).replace(/(\[|\])/g,'').split(',').map(item=>parseFloat(item))
 function flatten1(arr){
   //声明空数组
   let result = [];

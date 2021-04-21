@@ -2,31 +2,31 @@
  * Author: 朱世新
  * Date: 2021-04-12 14:18:20
  * LastEditors: 朱世新
- * LastEditTime: 2021-04-12 15:15:21
+ * LastEditTime: 2021-04-19 12:45:51
  * Description: 
 */
-// var target = {
-//   a:1,
-//   b:2
-// }
+var target = {
+  a:1,
+  b:2
+}
 
-// let proxy = new Proxy(target,{
-//   get(target,prop){
-//     return 'This is property value' + target[prop]
-//   },
+let proxy = new Proxy(target,{
+  get(target,prop){
+    return 'This is property value' + target[prop]
+  },
 
-//   set(target,prop,value){
-//     target[prop] = value;
-//     console.log(target[prop]);
-//   }
-// })
+  set(target,prop,value){
+    target[prop] = value;
+    console.log(target[prop]);
+  }
+})
 
-// console.log(proxy.a);
-// console.log(target.a);
-// proxy.b = 3;
-// console.log(target);
+console.log(proxy.a);
+console.log(target.a);
+proxy.b = 3;
+console.log(target);
 
-var obj = {a:1,b:2}
+//var obj = {a:1,b:2}
 //1.获取原型 [[GetPrototypeOf]]
 // var proto = Object.getPrototypeOf(obj);
 // console.log(proto);
@@ -51,6 +51,6 @@ var obj = {a:1,b:2}
 // console.log(obj);
 
 //4.获取自有属性[[GetOwnProperty]]
-Object.setPrototypeOf(obj,{c:3,d:4});
-console.log(Object.getOwnPropertyNames(obj));//["a","b"]
-console.log([1,2,3].map(parseInt));
+// Object.setPrototypeOf(obj,{c:3,d:4});
+// console.log(Object.getOwnPropertyNames(obj));//["a","b"]
+// console.log([1,2,3].map(parseInt));
