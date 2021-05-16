@@ -2,7 +2,7 @@
  * Author: 朱世新
  * Date: 2021-04-21 14:49:48
  * LastEditors: 朱世新
- * LastEditTime: 2021-04-21 15:04:16
+ * LastEditTime: 2021-04-21 15:29:25
  * Description: 
 */
 /*
@@ -29,6 +29,7 @@ var search = function (nums, target) {
     } else {
       left = mid + 1
     }
+    
   }
   return -1
 };
