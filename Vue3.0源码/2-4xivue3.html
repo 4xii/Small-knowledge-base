@@ -1,0 +1,128 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-07-03 21:42:07
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-07-05 23:20:44
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h3>{{title}}</h3>
+    <h3>{{state.title}}</h3>
+  </div>
+
+  <script>
+    //createApp返回的应用程序实例
+    const Vue = {
+      createApp(options) {
+        //暴露给浏览器平台
+        const renderer = Vue.createRenderer({
+          querySelector(selector){
+            return document.querySelector(selector)
+          },
+          insert(child,parent,anchor){
+            parent.insertBefore(child,anchor || null)
+          }
+        })
+        return renderer.createApp(options)
+      },
+      createRenderer({ querySelector,insert }) {
+        //返回自定义渲染器
+        return {
+          createApp(options) {
+
+            //返回app实例
+            return {
+              mount(selector) {
+                //mount的目标
+                const parent = querySelector(selector)
+                //mount需要将组件的配置解析为dom
+                /* 通过render函数实现 */
+                if (!options.render) {
+                  options.render = this.compile(parent.innerHTML)
+                }
+
+                //兼容setup函数
+                if (options.setup) {
+                  this.setupState = options.setup()
+                } else {
+                  this.data = options.data()
+                }
+
+                //Proxy
+                //确定render中数据获取
+                this.proxy = new Proxy(this, {
+                  get(target, key) {
+                    if (key in target.setupState) {
+                      return target.setupState[key]
+                    } else {
+                      return target.data[key]
+                    }
+                  },
+                  set(target, key, val) {
+                    if (key in target.setupState) {
+                      target.setupState[key] = val
+                    } else {
+                      target.data[key] = val
+                    }
+                  }
+                })
+
+                const el = options.render.call(this.proxy)
+
+                //追加到宿主元素
+                parent.innerHTML = '';
+                //parent.appendChild(el)
+                insert(el,parent)
+              },
+              compile(template) {
+                //模拟template
+
+                return function render() {
+                  const h3 = document.createElement('h3')
+                  h3.textContent = this.title
+                  return h3
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    //new Vue
+    //1.函数式: 类型的支持更好，ts
+    //2.标准化 简化 一致性:render函数,sync修饰符删除,指令定义，v-model调整
+    //3.tree-shaking
+    //4.复用性：composition api
+    //5.性能优化：响应式、编译器优化
+    //6.扩展性能
+    const { createApp } = Vue
+    const app = Vue.createApp({
+      data() {
+        return {
+          title: 'hello vue3!'
+        }
+      },
+      setup() {
+        return {
+          title: 'hello vue3!!!!!!'
+        }
+      }
+    })
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
