@@ -1,0 +1,67 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-07-20 22:57:37
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-07-20 23:14:15
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="button">登录</button>
+  <script>
+    // let loginLayer = (function () {
+    //   let div = document.createElement('div')
+    //   div.innerHTML = '登录的弹窗'
+    //   div.style.display = 'none'
+    //   document.body.appendChild(div)
+    //   return div
+    // })()
+
+    // document.getElementById('button').onclick = function () {
+    //   loginLayer.style.display = 'block'
+    // }
+
+    // let createLoginLayer = function () {
+    //   let div = document.createElement('div')
+    //   div.innerHTML = '登录的弹窗'
+    //   div.style.display = 'none'
+    //   document.body.appendChild(div)
+    //   return div
+    // }
+
+    // document.getElementById('button').onclick = function () {
+    //   let loginLayer = createLoginLayer()
+    //   loginLayer.style.display = 'block'
+    // }
+
+    let createLoginLayer = (function () {
+      let div
+      //如果说这个div不被销毁 一直在内存中的画
+      return function () {
+        if (!div) {
+          div = document.createElement('div')
+          div.innerHTML = '登录的弹窗'
+          div.style.display = 'none'
+          document.body.appendChild(div)
+          return div
+        }
+        return div
+      }
+    })()
+
+    document.getElementById('button').onclick = function () {
+      let loginLayer = createLoginLayer()
+      loginLayer.style.display = 'block'
+    }
+  </script>
+</body>
+
+</html>

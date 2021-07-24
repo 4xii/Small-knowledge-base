@@ -1,0 +1,52 @@
+<!--
+ * @Author: 朱世新
+ * @Date: 2021-07-24 20:51:57
+ * @LastEditors: 朱世新
+ * @LastEditTime: 2021-07-24 23:49:10
+ * @Description: 
+-->
+<!-- <script src="./src/index.js"></script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script>
+    //bundle.js
+    (function (list) {
+      function require(file) { // add.js  //index.js
+        var exports = {};
+        //自运行函数
+        (function (exports, code) {
+          eval(code)
+        })(exports, list[file])
+        return exports
+      }
+
+      //入口
+      require('index.js')
+    })({
+      'add.js': `
+      exports.default = function (a, b) { return a + b }
+      `,
+      'index': `
+      var add = require('./add.js').default
+      console.log(add(2, 4));
+      `
+    })
+
+    console.log(exports.default(1, 3));
+
+    var add = require('./add.js').default
+    console.log(add(2, 4));
+  </script> -->
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>
