@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "module":"dist/reactivity.esm-bundler.js",
-  "buildOptons":{
+  "buildOptions":{
     "name":"VueReactivity",
     "formats":[
       "cjs",

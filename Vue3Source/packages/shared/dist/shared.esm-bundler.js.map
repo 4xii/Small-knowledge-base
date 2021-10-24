@@ -1,0 +1,1 @@
+{"version":3,"file":"shared.esm-bundler.js","sources":["../src/index.ts"],"sourcesContent":["const shared = {\r\n\r\n}\r\n\r\nexport {\r\n    shared\r\n}"],"names":[],"mappings":"AAAK,MAAC,MAAM,GAAG;AACf;AACA;;;;"}
