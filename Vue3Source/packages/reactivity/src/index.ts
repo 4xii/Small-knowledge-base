@@ -1,7 +1,8 @@
-const Reactivity = {
-
-}
+//导出方法，不实现功能
 
 export {
-    Reactivity
-}
+    reactive,
+    shallowReactive,
+    shallowReadonly,
+    readonly
+} from './reactive'
