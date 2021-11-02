@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "module":"dist/reactivity.esm-bundler.js",
-  "buildOptions":{
-    "name":"VueReactivity",
-    "formats":[
+  "module": "dist/reactivity.esm-bundler.js",
+  "buildOptions": {
+    "name": "VueReactivity",
+    "formats": [
       "cjs",
       "esm-bundler",
       "global"
     ]
+  },
+  "dependencies": {
+    "@vue/shared": "1.0.0"
   }
 }

@@ -10,6 +10,6 @@ const target = 'reactivity'
 build(target)
 async function build(target) { //rollup -c --environment TARGET:shated
     await execa('rollup', ['-cw', '--environment', `TARGET:${target}`], { stdio: 'inherit' });//将子进程打包的信息共享给父进程
-    console.log(target);
+    console.log("target-------->",target);
 }
 
