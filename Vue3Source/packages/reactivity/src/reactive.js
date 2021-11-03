@@ -1,4 +1,4 @@
-import { isObject } from '@vue/shared'
+import { isObject } from '../../shared/src'
 import {
     mutableHandlers,
     shallowReactiveHandlers,

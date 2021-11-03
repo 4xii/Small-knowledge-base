@@ -1,1 +1,0 @@
-{"version":3,"file":"reactivity.cjs.js","sources":["../src/index.ts"],"sourcesContent":["const Reactivity = {\r\n\r\n}\r\n\r\nexport {\r\n    Reactivity\r\n}"],"names":[],"mappings":";;;;AAAK,MAAC,UAAU,GAAG;AACnB;AACA;;;;"}

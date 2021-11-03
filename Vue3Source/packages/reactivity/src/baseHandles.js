@@ -1,6 +1,6 @@
 // 实现 new Proxy(target，handler)
 
-import { extend, isObject } from '@vue/shared/src'
+import { extend, isObject } from '../../shared/src/index'
 import { reactive, readonly } from './reactive';
 
 const get = createGetter();
