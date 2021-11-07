@@ -1,22 +1,22 @@
 {
   "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js"
+  },
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "dev":"node scripts/dev.js",
-    "build":"node scripts/build.js"
-  },
-  "name": "vue3Source",
+  "name": "vue3-demo",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "execa": "^5.1.1",
-    "rollup": "^2.58.0",
+    "rollup": "^2.56.3",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.2"
   }
 }

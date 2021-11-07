@@ -1,1 +1,1 @@
-{"version":3,"file":"reactivity.global.js","sources":["../src/index.ts"],"sourcesContent":["const Reactivity = {\r\n\r\n}\r\n\r\nexport {\r\n    Reactivity\r\n}"],"names":[],"mappings":";;;AAAK,UAAC,UAAU,GAAG;AACnB;IACA;;;;;;;;;;;;"}
+{"version":3,"file":"reactivity.global.js","sources":[],"sourcesContent":[],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"}

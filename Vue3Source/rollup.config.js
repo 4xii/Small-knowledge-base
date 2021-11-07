@@ -46,7 +46,7 @@ function createConfig(format,output){
     return {
         input:resolve(`src/index.ts`),
         output,
-        Plugin:[
+        plugins:[
             json(),
             ts({
                 //ts 插件
