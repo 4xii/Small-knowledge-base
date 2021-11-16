@@ -1,1 +1,0 @@
-{"version":3,"file":"shared.esm-bundler.js","sources":["../src/index.ts"],"sourcesContent":["export const isObject = (value) => typeof value == 'object' && value !== null;\r\nexport const extend = Object.assign"],"names":[],"mappings":"AAAY,MAAC,QAAQ,GAAG,CAAC,KAAK,KAAK,OAAO,KAAK,IAAI,QAAQ,IAAI,KAAK,KAAK,KAAK;AAClE,MAAC,MAAM,GAAG,MAAM,CAAC;;;;"}
