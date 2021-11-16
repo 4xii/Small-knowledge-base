@@ -68,6 +68,8 @@ function createSetter(shallow = false) {//拦截设置功能
     return function set(target,key,value,receiver){
         const result = Reflect.set(target,key,value,receiver);//target[key] = value
 
+        //当数据更新时 通知对应属性的effect重新执行
+
         return result;
     }
 }

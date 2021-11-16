@@ -51,6 +51,7 @@ function track(target, type, key) {
     if (!dep.has(activeEffect)) {
         dep.add(activeEffect);
     }
+    console.log(targetMap);
 }
 //问题1
 /*
@@ -119,6 +120,7 @@ function createGetter(isReadonly = false, shallow = false) {
 function createSetter(shallow = false) {
     return function set(target, key, value, receiver) {
         const result = Reflect.set(target, key, value, receiver); //target[key] = value
+        //当数据更新时 通知对应属性的effect重新执行
         return result;
     };
 }

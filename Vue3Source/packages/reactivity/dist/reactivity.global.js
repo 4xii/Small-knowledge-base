@@ -54,6 +54,7 @@ var VueReactivity = (function (exports) {
         if (!dep.has(activeEffect)) {
             dep.add(activeEffect);
         }
+        console.log(targetMap);
     }
     //问题1
     /*

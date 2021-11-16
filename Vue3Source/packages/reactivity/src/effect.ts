@@ -53,6 +53,8 @@ export function track(target, type, key) { // 可以拿到当前的effect
     if (!dep.has(activeEffect)) {
         dep.add(activeEffect);
     }
+    console.log(targetMap);
+    
 }
 //问题1
 /*
