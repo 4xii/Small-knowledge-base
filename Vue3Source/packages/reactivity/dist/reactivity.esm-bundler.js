@@ -34,8 +34,23 @@ function createReactiveEffect(fn, options) {
     return effect;
 }
 //让，某个对象中的属性，收集当前他对应的effect函数
+const targetMap = new WeakMap();
 function track(target, type, key) {
-    console.log(target, key, activeEffect);
+    //  activeEffect; // 当前正在运行的effect
+    if (activeEffect === undefined) { // 此属性不用收集依赖，因为没在effect中使用
+        return;
+    }
+    let depsMap = targetMap.get(target);
+    if (!depsMap) {
+        targetMap.set(target, (depsMap = new Map));
+    }
+    let dep = depsMap.get(key);
+    if (!dep) {
+        depsMap.set(key, (dep = new Set));
+    }
+    if (!dep.has(activeEffect)) {
+        dep.add(activeEffect);
+    }
 }
 //问题1
 /*
